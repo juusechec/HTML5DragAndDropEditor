@@ -1,0 +1,41 @@
+.ipModuleUploadWindow {
+    background: url(data:image/gif;base64,R0lGODlhAgACAIAAANXV1fn5+SH5BAAAAAAALAAAAAACAAIAAAIDDBAFADs=); // source: bg_upload.gif
+    overflow: hidden;
+    position: relative;
+    .user-select(none);
+
+    ._container {}
+
+    ._buttons {
+        margin-left: 5px;
+        margin-top: 10px;
+        position: absolute;
+        z-index: @zindex-popover;
+    }
+}
+
+.ipModuleUploadProgressItem {
+    margin-bottom: (@grid-gutter-width / 4);
+
+    ._progressbar {
+        background: @color-silver-light2;
+        border: 1px solid @color-silver7;
+        height: (@grid-gutter-width / 2);
+
+        .ui-progressbar-value {
+            background: @color-blue;
+            border: 1px solid @color-blue2;
+            height: 100%;
+            margin: -1px;
+        }
+    }
+
+    ._title {
+        color: @upload-progress-title-color;
+        font-size: @upload-progress-title-font-size;
+        line-height: (@grid-gutter-width / 2); // container height
+        margin-top: -(@grid-gutter-width / 2); // container height
+        padding: 0 (@grid-gutter-width / 8);
+        text-shadow: @upload-progress-title-shadow;
+    }
+}

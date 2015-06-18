@@ -1,0 +1,61 @@
+.@{bootstrap-switch-base} {
+    border-radius: @bootstrap-switch-border-radius;
+
+    .@{bootstrap-switch-base}-container {
+        border-radius: @bootstrap-switch-border-radius;
+        line-height: inherit;
+        width: (@grid-gutter-width / 2 * 3); // width for 3 elements
+    }
+    .@{bootstrap-switch-base}-handle-on {
+        .border-left-radius(@bootstrap-switch-border-radius);
+    }
+
+    .@{bootstrap-switch-base}-handle-off {
+        .border-right-radius(@bootstrap-switch-border-radius);
+    }
+
+    &.@{bootstrap-switch-base}-on {
+        .@{bootstrap-switch-base}-label {
+            background-color: @btn-new-bg;
+            color: #fff;
+            .border-right-radius(@bootstrap-switch-border-radius);
+        }
+    }
+
+    &.@{bootstrap-switch-base}-off {
+        .@{bootstrap-switch-base}-container {
+            margin-left: -(@grid-gutter-width / 2); // pushing back to hide "on" handle
+        }
+        .@{bootstrap-switch-base}-label {
+            background-color: @btn-default-bg;
+            color: #000;
+            .border-left-radius(@bootstrap-switch-border-radius);
+        }
+    }
+
+    .@{bootstrap-switch-base}-handle-on,
+    .@{bootstrap-switch-base}-handle-off {
+        &.@{bootstrap-switch-base}-default {
+            background: @btn-default-bg;
+        }
+        &.@{bootstrap-switch-base}-new { // todox: if possible, use default naming from bootstrap
+            background: @btn-new-bg;
+        }
+    }
+
+    &.@{bootstrap-switch-base}-mini {
+        width: @grid-gutter-width;
+
+        .@{bootstrap-switch-base}-handle-on,
+        .@{bootstrap-switch-base}-handle-off,
+        .@{bootstrap-switch-base}-label {
+            float: left; // removing whitespace
+            font-size: 10px; // label/handle icon should be small, too
+            line-height: 10px; // to keep empty label same height
+            margin-top: 0;
+            padding-bottom: 4px; // to keep circle visually centered
+            padding-top: 3px; // to keep circle visually centered
+            width: (@grid-gutter-width / 2);
+        }
+    }
+}

@@ -1,0 +1,641 @@
+[
+'<div class="ip">
+    <div id="ipWidgetHeadingOptions" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Options</h4>
+                </div>
+                <div class="modal-body">
+                    <form class=" ipsAjaxSubmit ipsModuleFormAdmin"     method="post" action="http://15144.cloud.impresspages.org/" enctype="multipart/form-data">
+            <fieldset >
+                                        
+            <input  id="field_5849781771100487681" class="" name="securityToken"   type="hidden" value="248cd336a6611beb0457b68bf9657200" />
+        
+                            
+<input  style="display:none;" class="" name="antispam[]"   type="hidden" value="" />
+<input  style="display:none;" class="" name="antispam[]"   type="hidden" value="1156dc7f34347f3bc31fe9e770273116" />
+
+                            <div class="form-group type-text name-anchor">
+            <label for="field_4112758617046777857">
+            Anchor        </label>
+        <input  id="field_4112758617046777857" class="form-control " name="anchor"  type="text" value="" />    <div class="help-error"></div>
+            <div class="help-block">Anchor <span class="ipsAnchorPreview">http://15144.cloud.impresspages.org/#</span></div>
+        </div>
+
+                            <div class="form-group type-url name-link">
+            <label for="field_6380033863619444737">
+            Link        </label>
+        
+<div class="input-group">
+    <input  id="field_6380033863619444737" class="form-control " name="link"  type="text" value="" />
+    
+    <span class="input-group-btn">
+        <button class="ipsBrowse btn btn-default" type="button">Browse</button>
+    </span>
+            
+</div>
+    <div class="help-error"></div>
+        </div>
+
+                            <div class="form-group type-checkbox name-blank">
+            <label for="field_4243328740991434753">
+            Open in new window        </label>
+        
+        <div class="checkbox">
+            <label>
+                <input  id="field_4243328740991434753" class="" name="blank" type="checkbox"  />
+                
+            </label>
+        </div>
+            <div class="help-error"></div>
+        </div>
+
+                    </fieldset>
+    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary ipsConfirm">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="ip">
+    <div class="ipAdminWidgetToolbar hidden" id="ipWidgetHeadingControls">
+        <div class="btn-toolbar" role="toolbar">
+            <div class="btn-group">
+                                                    <button type="button" data-level="1" class="btn btn-controls ipsH">H1</button>
+                                                    <button type="button" data-level="2" class="btn btn-controls ipsH">H2</button>
+                                                    <button type="button" data-level="3" class="btn btn-controls ipsH">H3</button>
+                                <button type="button" class="btn btn-controls ipsOptions">Options</button>
+            </div>
+        </div>
+    </div>
+</div>
+',
+[],
+[],
+'<div class="ip">
+    <div class="ipAdminWidgetToolbar hidden" id="ipWidgetImageMenu">
+        <div class="btn-toolbar" role="toolbar">
+            <div class="btn-group">
+                <button class="btn btn-controls ipsEdit" role="button"><i class="fa fa-edit"></i></button>
+                <button class="btn btn-controls ipsLink" role="button"><i class="fa fa-link"></i></button>
+                <button class="btn btn-controls ipsSettings" role="button"><i class="fa fa-gears"></i></button>
+                <button class="btn btn-controls ipsActualSize" role="button"><i class="fa fa-refresh"></i></button>
+            </div>
+        </div>
+    </div>
+    <div id="ipWidgetImageEditPopup" class="modal">        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Edit image</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="ipsEditScreen"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary ipsConfirm">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="ipWidgetImageLinkPopup" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Link</h4>
+                </div>
+                <div class="modal-body">
+                    <form class=" ipsAjaxSubmit ipsModuleFormAdmin"     method="post" action="http://15144.cloud.impresspages.org/" enctype="multipart/form-data">
+            <fieldset >
+                                        
+            <input  id="field_3643024701082566657" class="" name="securityToken"   type="hidden" value="248cd336a6611beb0457b68bf9657200" />
+        
+                            
+<input  style="display:none;" class="" name="antispam[]"   type="hidden" value="" />
+<input  style="display:none;" class="" name="antispam[]"   type="hidden" value="1156dc7f34347f3bc31fe9e770273116" />
+
+                            <div class="form-group type-select name-type">
+            <label for="field_3432898103345152001">
+            Mouse click action        </label>
+        
+            <select  id="field_3432898103345152001" name="type" class="form-control "  >
+<option value="lightbox">Lightbox</option>
+<option value="link">URL</option>
+<option value="none">None</option>
+
+</select>
+    <div class="help-error"></div>
+        </div>
+
+                            <div class="form-group type-url name-url">
+            <label for="field_4807839472643211265">
+            Url        </label>
+        
+<div class="input-group">
+    <input  id="field_4807839472643211265" class="form-control " name="url"  type="text" value="" />
+    
+    <span class="input-group-btn">
+        <button class="ipsBrowse btn btn-default" type="button">Browse</button>
+    </span>
+            
+</div>
+    <div class="help-error"></div>
+        </div>
+
+                            <div class="form-group type-checkbox name-blank">
+            <label for="field_1849032070022561793">
+            Open in new window        </label>
+        
+        <div class="checkbox">
+            <label>
+                <input  id="field_1849032070022561793" class="" name="blank" type="checkbox"  />
+                
+            </label>
+        </div>
+            <div class="help-error"></div>
+        </div>
+
+                            <div class="form-group type-checkbox name-nofollow">
+            <label for="field_6826252683314200577">
+  Set rel=&quot;nofollow&quot; attribute        </label>
+        
+        <div class="checkbox">
+            <label>
+                <input  id="field_6826252683314200577" class="" name="nofollow" type="checkbox"  />
+                
+            </label>
+        </div>
+            <div class="help-error"></div>
+        </div>
+
+                    </fieldset>
+    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary ipsConfirm">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="ipWidgetImageSettingsPopup" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Settings</h4>
+                </div>
+                <div class="modal-body">
+                    <form class=" ipsAjaxSubmit ipModuleForm ipsModuleFormPublic"     method="post" action="http://15144.cloud.impresspages.org/" enctype="multipart/form-data">
+            <fieldset >
+                                        
+            <input  id="field_7986246375559921665" class="" name="securityToken"   type="hidden" value="248cd336a6611beb0457b68bf9657200" />
+        
+                            
+<input  style="display:none;" class="" name="antispam[]"   type="hidden" value="" />
+<input  style="display:none;" class="" name="antispam[]"   type="hidden" value="1156dc7f34347f3bc31fe9e770273116" />
+
+                            <div class="form-group type-text name-title">
+            <label for="field_6982035300373495809">
+            Title        </label>
+        <input  id="field_6982035300373495809" class="form-control " name="title"  type="text" value="" />    <div class="help-error"></div>
+        </div>
+
+                            <div class="form-group type-textarea name-description">
+            <label for="field_5797899962029178881">
+            Description        </label>
+        <textarea  id="field_5797899962029178881" class="form-control " name="description"  ></textarea>    <div class="help-error"></div>
+        </div>
+
+                    </fieldset>
+    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary ipsConfirm">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+',
+'<div class=\"ip\">\n    <div class=\"ipAdminWidgetToolbar ipsWidgetGalleryMenu hidden\" id=\"ipWidgetGalleryMenu\">\n        <div class=\"btn-toolbar\" role=\"toolbar\">\n            <div class=\"btn-group\">\n                <button class=\"btn btn-controls ipsEdit\" role=\"button\"><i class=\"fa fa-edit\"></i></button>\n                <button class=\"btn btn-controls ipsLink\" role=\"button\"><i class=\"fa fa-link\"></i></button>\n                <button class=\"btn btn-controls ipsSettings\" role=\"button\"><i class=\"fa fa-gears\"></i></button>\n                <button class=\"btn btn-controls ipsDelete\" role=\"button\"><i class=\"fa fa-trash-o\"></i></button>\n            </div>\n        </div>\n    </div>\n    <div id=\"ipWidgetGalleryEditPopup\" class=\"modal\">        <div class=\"modal-dialog\">\n            <div class=\"modal-content\">\n                <div class=\"modal-header\">\n                    <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">&times;</button>\n                    <h4 class=\"modal-title\">Edit image</h4>\n                </div>\n                <div class=\"modal-body\">\n                    <div class=\"ipsEditScreen\"></div>\n                </div>\n                <div class=\"modal-footer\">\n                    <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Cancel</button>\n                    <button type=\"button\" class=\"btn btn-primary ipsConfirm\">Confirm</button>\n                </div>\n            </div>\n        </div>\n    </div>\n    <div id=\"ipWidgetGalleryManagePopup\" class=\"modal\">        <div class=\"modal-dialog\">\n            <div class=\"modal-content\">\n                <div class=\"modal-header\">\n                    <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">&times;</button>\n                    <h4 class=\"modal-title\">Manage gallery</h4>\n                </div>\n                <div class=\"modal-body\">\n                    <div class=\"ipsContainer _container clearfix\">\n                    </div>\n                </div>\n                <div class=\"modal-footer\">\n                    <button type=\"button\" class=\"btn btn-primary ipsDone\" data-dismiss=\"modal\">Done</button>\n                </div>\n            </div>\n        </div>\n        <div class=\"ipsItemTemplate ipsItem _item\">\n            <img class=\"_image ipsImage\" src=\"\" alt=\"\" />\n        </div>\n    </div>\n    <div id=\"ipWidgetGalleryLinkPopup\" class=\"modal fade\">\n        <div class=\"modal-dialog\">\n            <div class=\"modal-content\">\n                <div class=\"modal-header\">\n                    <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">&times;</button>\n                    <h4 class=\"modal-title\">Link</h4>\n                </div>\n                <div class=\"modal-body\">\n                    <form class=\" ipsAjaxSubmit ipsModuleFormAdmin\"     method=\"post\" action=\"http://15144.cloud.impresspages.org/\" enctype=\"multipart/form-data\">\n            <fieldset >\n                                        \n            <input  id=\"field_5088979343120531457\" class=\"\" name=\"securityToken\"   type=\"hidden\" value=\"248cd336a6611beb0457b68bf9657200\" />\n        \n                            \n<input  style=\"display:none;\" class=\"\" name=\"antispam[]\"   type=\"hidden\" value=\"\" />\n<input  style=\"display:none;\" class=\"\" name=\"antispam[]\"   type=\"hidden\" value=\"1156dc7f34347f3bc31fe9e770273116\" />\n\n                            <div class=\"form-group type-select name-type\">\n            <label for=\"field_7322243860367671297\">\n            Mouse click action        </label>\n        \n            <select  id=\"field_7322243860367671297\" name=\"type\" class=\"form-control \"  >\n<option value=\"lightbox\">Lightbox</option>\n<option value=\"link\">URL</option>\n<option value=\"none\">None</option>\n\n</select>\n    <div class=\"help-error\"></div>\n        </div>\n\n                            <div class=\"form-group type-url name-url\">\n            <label for=\"field_8888890107080212481\">\n            Url        </label>\n        \n<div class=\"input-group\">\n    <input  id=\"field_8888890107080212481\" class=\"form-control \" name=\"url\"  type=\"text\" value=\"\" />\n    \n    <span class=\"input-group-btn\">\n        <button class=\"ipsBrowse btn btn-default\" type=\"button\">Browse</button>\n    </span>\n            \n</div>\n    <div class=\"help-error\"></div>\n        </div>\n\n                            <div class=\"form-group type-checkbox name-blank\">\n            <label for=\"field_780771981501923329\">\n            Open in new window        </label>\n        \n        <div class=\"checkbox\">\n            <label>\n                <input  id=\"field_780771981501923329\" class=\"\" name=\"blank\" type=\"checkbox\"  />\n                \n            </label>\n        </div>\n            <div class=\"help-error\"></div>\n        </div>\n\n                            <div class=\"form-group type-checkbox name-nofollow\">\n            <label for=\"field_5613228115036733441\">\n            Set rel=&quot;nofollow&quot; attribute        </label>\n        \n        <div class=\"checkbox\">\n            <label>\n                <input  id=\"field_5613228115036733441\" class=\"\" name=\"nofollow\" type=\"checkbox\"  />\n                \n            </label>\n        </div>\n            <div class=\"help-error\"></div>\n        </div>\n\n                    </fieldset>\n    </form>\n                </div>\n                <div class=\"modal-footer\">\n                    <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Cancel</button>\n                    <button type=\"button\" class=\"btn btn-primary ipsConfirm\">Confirm</button>\n                </div>\n            </div>\n        </div>\n    </div>\n    <div id=\"ipWidgetGallerySettingsPopup\" class=\"modal fade\">\n        <div class=\"modal-dialog\">\n            <div class=\"modal-content\">\n                <div class=\"modal-header\">\n                    <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">&times;</button>\n                    <h4 class=\"modal-title\">Settings</h4>\n                </div>\n                <div class=\"modal-body\">\n                    <form class=\" ipsAjaxSubmit ipModuleForm ipsModuleFormPublic\"     method=\"post\" action=\"http://15144.cloud.impresspages.org/\" enctype=\"multipart/form-data\">\n            <fieldset >\n                                        \n            <input  id=\"field_6724572523742101505\" class=\"\" name=\"securityToken\"   type=\"hidden\" value=\"248cd336a6611beb0457b68bf9657200\" />\n        \n                            \n<input  style=\"display:none;\" class=\"\" name=\"antispam[]\"   type=\"hidden\" value=\"\" />\n<input  style=\"display:none;\" class=\"\" name=\"antispam[]\"   type=\"hidden\" value=\"1156dc7f34347f3bc31fe9e770273116\" />\n\n                            <div class=\"form-group type-text name-title\">\n            <label for=\"field_489453893231575041\">\n            Title        </label>\n        <input  id=\"field_489453893231575041\" class=\"form-control \" name=\"title\"  type=\"text\" value=\"\" />    <div class=\"help-error\"></div>\n        </div>\n\n                            <div class=\"form-group type-textarea name-description\">\n            <label for=\"field_1684326950463602689\">\n            Description        </label>\n        <textarea  id=\"field_1684326950463602689\" class=\"form-control \" name=\"description\"  ></textarea>    <div class=\"help-error\"></div>\n        </div>\n\n                    </fieldset>\n    </form>\n                </div>\n                <div class=\"modal-footer\">\n                    <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Cancel</button>\n                    <button type=\"button\" class=\"btn btn-primary ipsConfirm\">Confirm</button>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n"
+
+"<div class="ip">
+    <div class="ipAdminWidgetToolbar ipsWidgetGalleryMenu hidden" id="ipWidgetGalleryMenu">
+        <div class="btn-toolbar" role="toolbar">
+            <div class="btn-group">
+                <button class="btn btn-controls ipsEdit" role="button"><i class="fa fa-edit"></i></button>
+                <button class="btn btn-controls ipsLink" role="button"><i class="fa fa-link"></i></button>
+                <button class="btn btn-controls ipsSettings" role="button"><i class="fa fa-gears"></i></button>
+                <button class="btn btn-controls ipsDelete" role="button"><i class="fa fa-trash-o"></i></button>
+            </div>
+        </div>
+    </div>
+    <div id="ipWidgetGalleryEditPopup" class="modal">        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Edit image</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="ipsEditScreen"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary ipsConfirm">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="ipWidgetGalleryManagePopup" class="modal">        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Manage gallery</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="ipsContainer _container clearfix">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary ipsDone" data-dismiss="modal">Done</button>
+                </div>
+            </div>
+        </div>
+        <div class="ipsItemTemplate ipsItem _item">
+            <img class="_image ipsImage" src="" alt="" />
+        </div>
+    </div>
+    <div id="ipWidgetGalleryLinkPopup" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Link</h4>
+                </div>
+                <div class="modal-body">
+                    <form class=" ipsAjaxSubmit ipsModuleFormAdmin"     method="post" action="http://15144.cloud.impresspages.org/" enctype="multipart/form-data">
+            <fieldset >
+                                        
+            <input  id="field_5088979343120531457" class="" name="securityToken"   type="hidden" value="248cd336a6611beb0457b68bf9657200" />
+        
+                            
+<input  style="display:none;" class="" name="antispam[]"   type="hidden" value="" />
+<input  style="display:none;" class="" name="antispam[]"   type="hidden" value="1156dc7f34347f3bc31fe9e770273116" />
+
+                            <div class="form-group type-select name-type">
+            <label for="field_7322243860367671297">
+            Mouse click action        </label>
+        
+            <select  id="field_7322243860367671297" name="type" class="form-control "  >
+<option value="lightbox">Lightbox</option>
+<option value="link">URL</option>
+<option value="none">None</option>
+
+</select>
+    <div class="help-error"></div>
+        </div>
+
+                            <div class="form-group type-url name-url">
+            <label for="field_8888890107080212481">
+            Url        </label>
+        
+<div class="input-group">
+    <input  id="field_8888890107080212481" class="form-control " name="url"  type="text" value="" />
+    
+    <span class="input-group-btn">
+        <button class="ipsBrowse btn btn-default" type="button">Browse</button>
+    </span>
+            
+</div>
+    <div class="help-error"></div>
+        </div>
+
+                            <div class="form-group type-checkbox name-blank">
+            <label for="field_780771981501923329">
+            Open in new window        </label>
+        
+        <div class="checkbox">
+            <label>
+                <input  id="field_780771981501923329" class="" name="blank" type="checkbox"  />
+                
+            </label>
+        </div>
+            <div class="help-error"></div>
+        </div>
+
+                            <div class="form-group type-checkbox name-nofollow">
+            <label for="field_5613228115036733441">
+            Set rel=&quot;nofollow&quot; attribute        </label>
+        
+        <div class="checkbox">
+            <label>
+                <input  id="field_5613228115036733441" class="" name="nofollow" type="checkbox"  />
+                
+            </label>
+        </div>
+            <div class="help-error"></div>
+        </div>
+
+                    </fieldset>
+    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary ipsConfirm">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="ipWidgetGallerySettingsPopup" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Settings</h4>
+                </div>
+                <div class="modal-body">
+                    <form class=" ipsAjaxSubmit ipModuleForm ipsModuleFormPublic"     method="post" action="http://15144.cloud.impresspages.org/" enctype="multipart/form-data">
+            <fieldset >
+                                        
+            <input  id="field_6724572523742101505" class="" name="securityToken"   type="hidden" value="248cd336a6611beb0457b68bf9657200" />
+        
+                            
+<input  style="display:none;" class="" name="antispam[]"   type="hidden" value="" />
+<input  style="display:none;" class="" name="antispam[]"   type="hidden" value="1156dc7f34347f3bc31fe9e770273116" />
+
+                            <div class="form-group type-text name-title">
+            <label for="field_489453893231575041">
+            Title        </label>
+        <input  id="field_489453893231575041" class="form-control " name="title"  type="text" value="" />    <div class="help-error"></div>
+        </div>
+
+                            <div class="form-group type-textarea name-description">
+            <label for="field_1684326950463602689">
+            Description        </label>
+        <textarea  id="field_1684326950463602689" class="form-control " name="description"  ></textarea>    <div class="help-error"></div>
+        </div>
+
+                    </fieldset>
+    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary ipsConfirm">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+',
+'<div class=\"ip\">\n    <div id=\"ipWidgetFilePopup\" class=\"modal fade\">\n        <div class=\"modal-dialog\">\n            <div class=\"modal-content\">\n                <div class=\"modal-header\">\n                    <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">&times;</button>\n                    <h4 class=\"modal-title\">Files</h4>\n                </div>\n                <div class=\"modal-body\">\n                    <div class=\"ipWidget_ipFile_container\"></div>\n                    <div class=\"hidden\">\n                        <div class=\"ipsFileTemplate form-group\">\n                            <div class=\"input-group\">\n                                <div class=\"input-group-btn\">\n                                    <button class=\"btn btn-default ipsFileMove\" type=\"button\" title=\"Drag\"><i class=\"fa fa-arrows\"></i></button>\n                                </div>\n                                <input type=\"text\" class=\"form-control ipsFileTitle\" name=\"title\" value=\"\" />\n                                <div class=\"input-group-btn\">\n                                    <a href=\"#\" class=\"btn btn-default ipsFileLink\" target=\"_blank\" title=\"Preview\"><i class=\"fa fa-external-link\"></i></a>\n                                    <button class=\"btn btn-danger ipsFileRemove\" type=\"button\" title=\"Delete\"><i class=\"fa fa-trash-o\"></i></button>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                    <a href=\"#\" class=\"ipsUpload ipAdminButton btn btn-new\">Add new</a>\n                </div>\n                <div class=\"modal-footer\">\n                    <button type=\"button\" class=\"btn btn-default ipsCancel\" data-dismiss=\"modal\">Cancel</button>\n                    <button type=\"button\" class=\"btn btn-primary ipsConfirm\">Confirm</button>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n"
+
+"<div class="ip">
+    <div id="ipWidgetFilePopup" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Files</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="ipWidget_ipFile_container"></div>
+                    <div class="hidden">
+                        <div class="ipsFileTemplate form-group">
+                            <div class="input-group">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-default ipsFileMove" type="button" title="Drag"><i class="fa fa-arrows"></i></button>
+                                </div>
+                                <input type="text" class="form-control ipsFileTitle" name="title" value="" />
+                                <div class="input-group-btn">
+                                    <a href="#" class="btn btn-default ipsFileLink" target="_blank" title="Preview"><i class="fa fa-external-link"></i></a>
+                                    <button class="btn btn-danger ipsFileRemove" type="button" title="Delete"><i class="fa fa-trash-o"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="ipsUpload ipAdminButton btn btn-new">Add new</a>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default ipsCancel" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary ipsConfirm">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+',
+[],
+'<div class=\"ip\">\n    <div id=\"ipWidgetFormPopup\" class=\"ipModuleContentFormModal modal fade\">\n        <div class=\"modal-dialog\">\n            <div class=\"modal-content\">\n                <div class=\"modal-header\">\n                    <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">&times;</button>\n                    <h4 class=\"modal-title\">Form options</h4>\n                </div>\n                <div class=\"modal-body\">\n                    <ul class=\"nav nav-tabs ipsTabs\">\n                        <li class=\"active\"><a href=\"#ipWidgetFormPopup-fields\" data-toggle=\"tab\">Fields</a></li>\n                        <li><a href=\"#ipWidgetFormPopup-options\" data-toggle=\"tab\">Options</a></li>\n                    </ul>\n\n                    <div class=\"tab-content\">\n                        <div class=\"tab-pane active\" id=\"ipWidgetFormPopup-fields\">\n                            <div class=\"ipWidget_ipForm_container\"></div>\n                            <div class=\"hidden\">\n                                <div class=\"ipsFieldTemplate form-group\">\n                                    <div class=\"input-group\">\n                                        <div class=\"input-group-btn\">\n                                            <button class=\"btn btn-default ipsFieldMove\" type=\"button\" title=\"Drag\"><i class=\"fa fa-arrows\"></i></button>\n                                        </div>\n                                        <input type=\"text\" class=\"form-control ipsFieldLabel\" name=\"label\" value=\"\" />\n                                        <div class=\"input-group-addon\">\n                                            <select class=\"ipsFieldType\">\n                                                                                                    <option value=\"Captcha\">Captcha</option>\n                                                                                                    <option value=\"Checkbox\">Checkbox</option>\n                                                                                                    <option value=\"Checkboxes\">Checkboxes</option>\n                                                                                                    <option value=\"Email\">Email</option>\n                                                                                                    <option value=\"Fieldset\">Fieldset</option>\n                                                                                                    <option value=\"File\">File</option>\n                                                                                                    <option value=\"Radio\">Radio</option>\n                                                                                                    <option value=\"RichText\">Rich text</option>\n                                                                                                    <option value=\"Select\">Select</option>\n                                                                                                    <option value=\"Text\">Text</option>\n                                                                                                    <option value=\"Textarea\">Textarea</option>\n                                                                                            </select>\n                                        </div>\n                                        <div class=\"input-group-btn\">\n                                            <button href=\"#\" class=\"btn btn-default hidden ipsFieldRequired\" title=\"Required\">Required</button>\n                                            <button href=\"#\" class=\"btn btn-default ipsFieldOptional\" title=\"Optional\">Optional</button>\n                                            <button href=\"#\" class=\"btn btn-default ipsFieldOptions\" title=\"Options\"><i class=\"fa fa-cogs\"></i></button>\n                                            <button class=\"btn btn-danger ipsFieldRemove\" type=\"button\" title=\"Delete\"><i class=\"fa fa-trash-o\"></i></button>\n                                        </div>\n                                    </div>\n                                </div>\n                            </div>\n                            <button type=\"button\" class=\"btn btn-new ipsFieldAdd\">Add new</button>\n                        </div>\n\n                        <div class=\"tab-pane\" id=\"ipWidgetFormPopup-options\">\n                            <form class=\" ipsAjaxSubmit ipsModuleFormAdmin\"     method=\"post\" action=\"http://15144.cloud.impresspages.org/\" enctype=\"multipart/form-data\">\n            <fieldset >\n                                        \n            <input  id=\"field_5911095667656228865\" class=\"\" name=\"securityToken\"   type=\"hidden\" value=\"248cd336a6611beb0457b68bf9657200\" />\n        \n                            \n<input  style=\"display:none;\" class=\"\" name=\"antispam[]\"   type=\"hidden\" value=\"\" />\n<input  style=\"display:none;\" class=\"\" name=\"antispam[]\"   type=\"hidden\" value=\"1156dc7f34347f3bc31fe9e770273116\" />\n\n                            <div class=\"form-group type-richText name-success\">\n            <label for=\"field_8259918972946743297\">\n            Thank you message        </label>\n        <textarea  id=\"field_8259918972946743297\" class=\"form-control \" name=\"success\"  ></textarea>    <div class=\"help-error\"></div>\n        </div>\n\n                            <div class=\"form-group type-select name-sendTo\">\n            <label for=\"field_2537505401901940737\">\n            Recipient        </label>\n        \n            <select  id=\"field_2537505401901940737\" name=\"sendTo\" class=\"form-control \"  >n<option value=\"default\">Website's email (example@example.com)</option>\n<option value=\"custom\">Custom emails separated by space</option>\n\n</select>\n    <div class=\"help-error\"></div>\n        </div>\n\n                            <div class=\"form-group type-text name-emails\">\n            <label for=\"field_357017421313212417\">\n            Custom emails separated by space        </label>\n        <input  id=\"field_357017421313212417\" class=\"form-control \" name=\"emails\"  type=\"text\" value=\"\" />    <div class=\"help-error\"></div>\n        </div>\n\n                            <div class=\"form-group type-text name-buttonText\">\n            <label for=\"field_3149305553138745345\">\n            Submit button text (leave empty for default)        </label>\n        <input  id=\"field_3149305553138745345\" class=\"form-control \" name=\"buttonText\"  type=\"text\" value=\"\" />    <div class=\"help-error\"></div>\n        </div>\n\n                    </fieldset>\n    </form>\n                        </div>\n                    </div>\n                </div>\n                <div class=\"modal-footer\">\n                    <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Cancel</button>\n                    <button type=\"button\" class=\"btn btn-primary ipsConfirm\">Confirm</button>\n                </div>\n            </div>\n        </div>\n    </div>\n    <div id=\"ipWidgetFormPopupOptions\" class=\"ipsFieldOptionsPopup modal fade\">\n        <div class=\"modal-dialog\">\n            <div class=\"modal-content\">\n                <div class=\"modal-header\">\n                    <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">&times;</button>\n                    <h4 class=\"modal-title\">Field options</h4>\n                </div>\n                <div class=\"modal-body\">\n                </div>\n                <div class=\"modal-footer\">\n                    <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Cancel</button>\n                    <button type=\"button\" class=\"btn btn-primary ipsConfirm\">Confirm</button>\n                </div>\n            </div>\n        </div>\n    </div>\n\n</div>\n"
+
+"<div class="ip">
+    <div id="ipWidgetFormPopup" class="ipModuleContentFormModal modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Form options</h4>
+                </div>
+                <div class="modal-body">
+                    <ul class="nav nav-tabs ipsTabs">
+                        <li class="active"><a href="#ipWidgetFormPopup-fields" data-toggle="tab">Fields</a></li>
+                        <li><a href="#ipWidgetFormPopup-options" data-toggle="tab">Options</a></li>
+                    </ul>
+
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="ipWidgetFormPopup-fields">
+                            <div class="ipWidget_ipForm_container"></div>
+                            <div class="hidden">
+                                <div class="ipsFieldTemplate form-group">
+                                    <div class="input-group">
+                                        <div class="input-group-btn">
+                                            <button class="btn btn-default ipsFieldMove" type="button" title="Drag"><i class="fa fa-arrows"></i></button>
+                                        </div>
+                                        <input type="text" class="form-control ipsFieldLabel" name="label" value="" />
+                                        <div class="input-group-addon">
+                                            <select class="ipsFieldType">
+													<option value="Captcha">Captcha</option>
+													<option value="Checkbox">Checkbox</option>
+													<option value="Checkboxes">Checkboxes</option>
+													<option value="Email">Email</option>
+													<option value="Fieldset">Fieldset</option>
+													<option value="File">File</option>
+													<option value="Radio">Radio</option>
+													<option value="RichText">Rich text</option>
+													<option value="Select">Select</option>
+													<option value="Text">Text</option>
+													<option value="Textarea">Textarea</option>
+											</select>
+                                        </div>
+                                        <div class="input-group-btn">
+                                            <button href="#" class="btn btn-default hidden ipsFieldRequired" title="Required">Required</button>
+                                            <button href="#" class="btn btn-default ipsFieldOptional" title="Optional">Optional</button>
+                                            <button href="#" class="btn btn-default ipsFieldOptions" title="Options"><i class="fa fa-cogs"></i></button>
+                                            <button class="btn btn-danger ipsFieldRemove" type="button" title="Delete"><i class="fa fa-trash-o"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-new ipsFieldAdd">Add new</button>
+                        </div>
+
+                        <div class="tab-pane" id="ipWidgetFormPopup-options">
+                            <form class=" ipsAjaxSubmit ipsModuleFormAdmin"     method="post" action="http://15144.cloud.impresspages.org/" enctype="multipart/form-data">
+            <fieldset >
+                                        
+            <input  id="field_5911095667656228865" class="" name="securityToken"   type="hidden" value="248cd336a6611beb0457b68bf9657200" />
+        
+                            
+<input  style="display:none;" class="" name="antispam[]"   type="hidden" value="" />
+<input  style="display:none;" class="" name="antispam[]"   type="hidden" value="1156dc7f34347f3bc31fe9e770273116" />
+
+                            <div class="form-group type-richText name-success">
+            <label for="field_8259918972946743297">
+            Thank you message        </label>
+        <textarea  id="field_8259918972946743297" class="form-control " name="success"  ></textarea>    <div class="help-error"></div>
+        </div>
+
+                            <div class="form-group type-select name-sendTo">
+            <label for="field_2537505401901940737">
+            Recipient        </label>
+        
+            <select  id="field_2537505401901940737" name="sendTo" class="form-control "  >n<option value="default">Website's email (example@example.com)</option>
+<option value="custom">Custom emails separated by space</option>
+
+</select>
+    <div class="help-error"></div>
+        </div>
+
+                            <div class="form-group type-text name-emails">
+            <label for="field_357017421313212417">
+            Custom emails separated by space        </label>
+        <input  id="field_357017421313212417" class="form-control " name="emails"  type="text" value="" />    <div class="help-error"></div>
+        </div>
+
+                            <div class="form-group type-text name-buttonText">
+            <label for="field_3149305553138745345">
+            Submit button text (leave empty for default)        </label>
+        <input  id="field_3149305553138745345" class="form-control " name="buttonText"  type="text" value="" />    <div class="help-error"></div>
+        </div>
+
+                    </fieldset>
+    </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary ipsConfirm">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="ipWidgetFormPopupOptions" class="ipsFieldOptionsPopup modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Field options</h4>
+                </div>
+                <div class="modal-body">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary ipsConfirm">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+',
+'<div class=\"ip\">\n    <div id=\"ipWidgetVideoPopup\" class=\"modal fade\">\n        <div class=\"modal-dialog\">\n            <div class=\"modal-content\">\n                <div class=\"modal-header\">\n                    <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">&times;</button>\n                    <h4 class=\"modal-title\">Video widget settings</h4>\n                </div>\n\n                <div class=\"modal-body\">\n                    <form class=\" ipsAjaxSubmit ipsModuleFormAdmin\"     method=\"post\" action=\"http://15144.cloud.impresspages.org/\" enctype=\"multipart/form-data\">\n            <fieldset >\n                                        \n            <input  id=\"field_8917539265521385473\" class=\"\" name=\"securityToken\"   type=\"hidden\" value=\"248cd336a6611beb0457b68bf9657200\" />\n        \n                            \n<input  style=\"display:none;\" class=\"\" name=\"antispam[]\"   type=\"hidden\" value=\"\" />\n<input  style=\"display:none;\" class=\"\" name=\"antispam[]\"   type=\"hidden\" value=\"1156dc7f34347f3bc31fe9e770273116\" />\n\n                            <div class=\"form-group type-text name-url\">\n            <label for=\"field_6792330254221312001\">\n            Url        </label>\n        <input  id=\"field_6792330254221312001\" class=\"form-control \" name=\"url\"  type=\"text\" value=\"\" />    <div class=\"help-error\"></div>\n        </div>\n\n                            <div class=\"form-group type-select name-size\">\n            <label for=\"field_1115975057760321537\">\n            Size        </label>\n        \n            <select  id=\"field_1115975057760321537\" name=\"size\" class=\"form-control \"  >\n<option value=\"auto\">Auto</option>\n<option value=\"custom\">Custom</option>\n\n</select>\n    <div class=\"help-error\"></div>\n        </div>\n\n                            <div class=\"form-group type-number name-width\">\n            <label for=\"field_8033244265649799169\">\n            Width        </label>\n        <input  id=\"field_8033244265649799169\" class=\"form-control \" name=\"width\"  type=\"number\" value=\"\" />    <div class=\"help-error\"></div>\n        </div>\n\n                            <div class=\"form-group type-number name-height\">\n            <label for=\"field_2376797690009747457\">\n            Height        </label>\n        <input  id=\"field_2376797690009747457\" class=\"form-control \" name=\"height\"  type=\"number\" value=\"\" />    <div class=\"help-error\"></div>\n        </div>\n\n                            <div class=\"form-group type-select name-ratio\">\n            <label for=\"field_2965007127782883329\">\n            Aspect ratio        </label>\n        \n            <select  id=\"field_2965007127782883329\" name=\"ratio\" class=\"form-control \"  >\n<option value=\"16:9\">16:9</option>\n<option value=\"4:3\">4:3</option>\n\n</select>\n    <div class=\"help-error\"></div>\n        </div>\n\n                    </fieldset>\n    </form>\n                </div>\n                <div class=\"modal-footer\">\n                    <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Cancel</button>\n                    <button type=\"button\" class=\"btn btn-primary ipsConfirm\">Confirm</button>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n"
+
+"<div class="ip">
+    <div id="ipWidgetVideoPopup" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Video widget settings</h4>
+                </div>
+
+                <div class="modal-body">
+                    <form class=" ipsAjaxSubmit ipsModuleFormAdmin"     method="post" action="http://15144.cloud.impresspages.org/" enctype="multipart/form-data">
+            <fieldset >
+                                        
+            <input  id="field_8917539265521385473" class="" name="securityToken"   type="hidden" value="248cd336a6611beb0457b68bf9657200" />
+        
+                            
+<input  style="display:none;" class="" name="antispam[]"   type="hidden" value="" />
+<input  style="display:none;" class="" name="antispam[]"   type="hidden" value="1156dc7f34347f3bc31fe9e770273116" />
+
+                            <div class="form-group type-text name-url">
+            <label for="field_6792330254221312001">
+            Url        </label>
+        <input  id="field_6792330254221312001" class="form-control " name="url"  type="text" value="" />    <div class="help-error"></div>
+        </div>
+
+                            <div class="form-group type-select name-size">
+            <label for="field_1115975057760321537">
+            Size        </label>
+        
+            <select  id="field_1115975057760321537" name="size" class="form-control "  >
+<option value="auto">Auto</option>
+<option value="custom">Custom</option>
+
+</select>
+    <div class="help-error"></div>
+        </div>
+
+                            <div class="form-group type-number name-width">
+            <label for="field_8033244265649799169">
+            Width        </label>
+        <input  id="field_8033244265649799169" class="form-control " name="width"  type="number" value="" />    <div class="help-error"></div>
+        </div>
+
+                            <div class="form-group type-number name-height">
+            <label for="field_2376797690009747457">
+            Height        </label>
+        <input  id="field_2376797690009747457" class="form-control " name="height"  type="number" value="" />    <div class="help-error"></div>
+        </div>
+
+                            <div class="form-group type-select name-ratio">
+            <label for="field_2965007127782883329">
+            Aspect ratio        </label>
+        
+            <select  id="field_2965007127782883329" name="ratio" class="form-control "  >
+<option value="16:9">16:9</option>
+<option value="4:3">4:3</option>
+
+</select>
+    <div class="help-error"></div>
+        </div>
+
+                    </fieldset>
+    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary ipsConfirm">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+',
+'<div id="ipWidgetMapSearchBoxTemplate" class="hidden">
+    <input class="ipsWidgetMapLocationSearch" type="text" placeholder="Search Box">
+</div>
+'
+]

@@ -1,0 +1,71 @@
+{
+    "title": "Air",
+    "version": "1.00",
+    "doctype": "HTML5", /* HTML5, XHTML1_STRICT, XHTML1_TRANSITIONAL, XHTML1_FRAMESET, HTML4_STRICT, HTML4_TRANSITIONAL, HTML4_FRAMESET  */
+    "thumbnail": "thumbnail.png",
+    "author": "ImpressPages",
+    "widget": { /* Image cropping settings for widgets. Require theme reinstall to take affect. */
+        "image": {
+            "width": 1180, /* For responsiveness and optimization it should be the same as the widest block */
+            "height": 400
+        },
+        "gallery": { /* For responsiveness and optimization it should the size as it would appear on the widest block */
+            "width": 295,
+            "height": 164
+        },
+        "heading": {
+            "maxLevel": 3
+        }
+    },
+    "textStyles": [
+        {
+            "title": "Quote",
+            "inline": "span",
+            "classes": "quote"
+        },
+        {
+            "title": "Note",
+            "inline": "span",
+            "classes": "note"
+        },
+        {
+            "title": "Button",
+            "inline": "span",
+            "classes": "button"
+        }
+    ],
+    "options": [
+        {
+            "label": "Text color",
+            "name": "textColor",
+            "type": "color",
+            "default": "#000"
+        },
+        {
+            "label": "Link color",
+            "name": "linkColor",
+            "type": "color",
+            "default": "#019bd4"
+        },
+        {
+            "label": "Body background color",
+            "name": "bodyBackgroundColor",
+            "type": "color",
+            "default": "#fff"
+        },
+        {
+            "label": "Content background color",
+            "name": "backgroundColor",
+            "type": "color",
+            "default": "#fff"
+        },
+        {
+            "label": "Collapse sidebar menu",
+            "name": "collapseSidebarMenu",
+            "type": "select",
+            "default": "no",
+            "values": ["no", "yes"]
+        }
+    ]
+
+}

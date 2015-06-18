@@ -1,0 +1,19 @@
+.ipWidget-Heading {
+    // more space above title and less below to keep content visually separated
+    margin-bottom: (@ipWidgetSpace / 2);
+    margin-top: (@ipWidgetSpace * 1.5);
+
+    &:first-child {
+        // however, if title is the first element it should start from the very top
+        margin-top: 0;
+    }
+
+    a {
+        color: @ipTextColor;
+        text-decoration: inherit;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

@@ -1,0 +1,1368 @@
+.clear {
+  /* http://sonspring.com/journal/clearing-floats */
+  clear: both;
+  display: block;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+}
+.clearfix,
+.ipModuleForm .form-horizontal .form-group,
+.ipModuleForm.form-horizontal .form-group {
+  /* http://www.yuiblog.com/blog/2010/09/27/clearfix-reloaded-overflowhidden-demystified */
+  /*
+The following zoom:1 rule is specifically for IE6 + IE7.
+Move to separate stylesheet if invalid CSS is a problem.
+*/
+  zoom: 1;
+}
+.clearfix:before,
+.clearfix:after,
+.ipModuleForm .form-horizontal .form-group:before,
+.ipModuleForm .form-horizontal .form-group:after,
+.ipModuleForm.form-horizontal .form-group:before,
+.ipModuleForm.form-horizontal .form-group:after {
+  content: '.';
+  display: block;
+  font-size: 0;
+  height: 0;
+  line-height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+}
+.clearfix:after,
+.ipModuleForm .form-horizontal .form-group:after,
+.ipModuleForm.form-horizontal .form-group:after {
+  clear: both;
+}
+.hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+html,
+body {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+.quote {
+  color: #000000;
+  display: block;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-size: 24px;
+  font-style: italic;
+  font-weight: normal;
+  margin: 1em;
+  text-align: center;
+}
+.note {
+  background-color: transparent;
+  border-left-color: #747474;
+  border-left-style: solid;
+  border-left-width: 2px;
+  color: #000000;
+  display: block;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 14px;
+  font-style: italic;
+  font-weight: normal;
+  margin-bottom: 1em;
+  padding-left: 1em;
+}
+.button {
+  background-color: #019bd4;
+  border-radius: 5px;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: bold;
+  padding: 0.5em 1em 0.5em 1em;
+  text-decoration: none;
+}
+.button:hover {
+  box-shadow: 0 0 0 1px #019bd4 inset;
+  background: #01516e;
+}
+.button a {
+  color: inherit;
+}
+.button a:hover {
+  text-decoration: inherit;
+}
+.ipWidget .button a {
+  color: #ffffff;
+}
+.ipWidget {
+  /* http://www.yuiblog.com/blog/2010/09/27/clearfix-reloaded-overflowhidden-demystified */
+  /*
+The following zoom:1 rule is specifically for IE6 + IE7.
+Move to separate stylesheet if invalid CSS is a problem.
+*/
+  zoom: 1;
+  color: #000000;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.ipWidget:before,
+.ipWidget:after {
+  content: '.';
+  display: block;
+  font-size: 0;
+  height: 0;
+  line-height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+}
+.ipWidget:after {
+  clear: both;
+}
+.ipWidget h1,
+.ipWidget h2,
+.ipWidget h3,
+.ipWidget h4,
+.ipWidget h5,
+.ipWidget h6,
+.ipWidget img,
+.ipWidget blockquote,
+.ipWidget p,
+.ipWidget ul,
+.ipWidget ol,
+.ipWidget li,
+.ipWidget dl,
+.ipWidget dd,
+.ipWidget dt,
+.ipWidget pre {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+.ipWidget:last-child {
+  margin-bottom: 0;
+}
+.ipWidget .quote {
+  color: #000000;
+  display: block;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-size: 24px;
+  font-style: italic;
+  font-weight: normal;
+  margin: 1em;
+  text-align: center;
+}
+.ipWidget .note {
+  background-color: transparent;
+  border-left-color: #747474;
+  border-left-style: solid;
+  border-left-width: 2px;
+  color: #000000;
+  display: block;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 14px;
+  font-style: italic;
+  font-weight: normal;
+  margin-bottom: 1em;
+  padding-left: 1em;
+}
+.ipWidget .button {
+  background-color: #019bd4;
+  border-radius: 5px;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: bold;
+  padding: 0.5em 1em 0.5em 1em;
+  text-decoration: none;
+}
+.ipWidget .button:hover {
+  box-shadow: 0 0 0 1px #019bd4 inset;
+  background: #01516e;
+}
+.ipWidget .button a {
+  color: inherit;
+}
+.ipWidget .button a:hover {
+  text-decoration: inherit;
+}
+.ipWidget h1 {
+  color: #000000;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-size: 36px;
+}
+.ipWidget h2 {
+  color: #000000;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-size: 30px;
+}
+.ipWidget h3 {
+  color: #000000;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-size: 24px;
+}
+.ipWidget ul {
+  list-style-position: inside;
+  list-style-type: square;
+  margin: 0 0 1em 1em;
+}
+.ipWidget ol {
+  list-style-position: inside;
+  margin: 0 0 1em 1em;
+}
+.ipWidget p {
+  line-height: 1.5;
+  margin-bottom: 1em;
+}
+.ipWidget ul ul,
+.ipWidget ol ol {
+  margin-bottom: 0;
+}
+.ipWidget li {
+  line-height: 1.5;
+  margin-bottom: 5px;
+}
+.ipWidget p + ul,
+.ipWidget p + ol {
+  margin-top: -0.5em;
+}
+.ipWidget a {
+  color: #019bd4;
+  text-decoration: none;
+}
+.ipWidget a:hover {
+  text-decoration: underline;
+}
+.ipWidget table {
+  border-collapse: collapse;
+  color: #000000;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 14px;
+  margin-bottom: 1em;
+  width: 100%;
+}
+.ipWidget table p {
+  line-height: normal;
+  margin: 0;
+}
+.ipWidget td {
+  border-bottom: 1px solid #747474;
+  font-size: 14px;
+  padding: 9px;
+}
+.ipWidget th,
+.ipWidget thead td,
+.ipWidget tbody tr:first-child td {
+  font-size: 14px;
+  font-weight: bold;
+}
+.ipWidget thead + tbody tr:first-child td {
+  background-color: transparent;
+  border-bottom: 1px solid #8e8e8e;
+  color: inherit;
+  font-size: 14px;
+  font-weight: normal;
+}
+.ipWidget p:last-child,
+.ipWidget ul:last-child,
+.ipWidget ol:last-child {
+  margin-bottom: 0;
+}
+.ipModuleForm fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  min-width: 0;
+}
+.ipModuleForm legend {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 21px;
+  font-size: 21px;
+  line-height: inherit;
+  color: #000000;
+  border: 0;
+  border-bottom: 1px solid #747474;
+}
+.ipModuleForm label {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.ipModuleForm input[type="search"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.ipModuleForm input[type="radio"],
+.ipModuleForm input[type="checkbox"] {
+  margin: 4px 0 0;
+  margin-top: 1px \9;
+  line-height: normal;
+}
+.ipModuleForm input[type="file"] {
+  display: block;
+}
+.ipModuleForm input[type="range"] {
+  display: block;
+  width: 100%;
+}
+.ipModuleForm select[multiple],
+.ipModuleForm select[size] {
+  height: auto;
+}
+.ipModuleForm input[type="file"]:focus,
+.ipModuleForm input[type="radio"]:focus,
+.ipModuleForm input[type="checkbox"]:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.ipModuleForm output {
+  display: block;
+  padding-top: 7px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #000000;
+}
+.ipModuleForm .form-control {
+  display: block;
+  width: 100%;
+  height: 35px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #000000;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #747474;
+  border-radius: 3px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+.ipModuleForm .form-control:focus {
+  border-color: #000000;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(0, 0, 0, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(0, 0, 0, 0.6);
+}
+.ipModuleForm .form-control::-moz-placeholder {
+  color: #777777;
+  opacity: 1;
+}
+.ipModuleForm .form-control:-ms-input-placeholder {
+  color: #777777;
+}
+.ipModuleForm .form-control::-webkit-input-placeholder {
+  color: #777777;
+}
+.ipModuleForm .form-control[disabled],
+.ipModuleForm .form-control[readonly],
+fieldset[disabled] .ipModuleForm .form-control {
+  cursor: not-allowed;
+  background-color: #eeeeee;
+  opacity: 1;
+}
+textarea.ipModuleForm .form-control {
+  height: auto;
+}
+.ipModuleForm input[type="search"] {
+  -webkit-appearance: none;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .ipModuleForm input[type="date"],
+  .ipModuleForm input[type="time"],
+  .ipModuleForm input[type="datetime-local"],
+  .ipModuleForm input[type="month"] {
+    line-height: 35px;
+  }
+  .ipModuleForm input[type="date"].input-sm,
+  .ipModuleForm input[type="time"].input-sm,
+  .ipModuleForm input[type="datetime-local"].input-sm,
+  .ipModuleForm input[type="month"].input-sm,
+  .input-group-sm .ipModuleForm input[type="date"],
+  .input-group-sm .ipModuleForm input[type="time"],
+  .input-group-sm .ipModuleForm input[type="datetime-local"],
+  .input-group-sm .ipModuleForm input[type="month"] {
+    line-height: 30px;
+  }
+  .ipModuleForm input[type="date"].input-lg,
+  .ipModuleForm input[type="time"].input-lg,
+  .ipModuleForm input[type="datetime-local"].input-lg,
+  .ipModuleForm input[type="month"].input-lg,
+  .input-group-lg .ipModuleForm input[type="date"],
+  .input-group-lg .ipModuleForm input[type="time"],
+  .input-group-lg .ipModuleForm input[type="datetime-local"],
+  .input-group-lg .ipModuleForm input[type="month"] {
+    line-height: 46px;
+  }
+}
+.ipModuleForm .form-group {
+  margin-bottom: 15px;
+}
+.ipModuleForm .radio,
+.ipModuleForm .checkbox {
+  position: relative;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.ipModuleForm .radio label,
+.ipModuleForm .checkbox label {
+  min-height: 21px;
+  padding-left: 20px;
+  margin-bottom: 0;
+  font-weight: normal;
+  cursor: pointer;
+}
+.ipModuleForm .radio input[type="radio"],
+.ipModuleForm .radio-inline input[type="radio"],
+.ipModuleForm .checkbox input[type="checkbox"],
+.ipModuleForm .checkbox-inline input[type="checkbox"] {
+  position: absolute;
+  margin-left: -20px;
+  margin-top: 4px \9;
+}
+.ipModuleForm .radio + .radio,
+.ipModuleForm .checkbox + .checkbox {
+  margin-top: -5px;
+}
+.ipModuleForm .radio-inline,
+.ipModuleForm .checkbox-inline {
+  display: inline-block;
+  padding-left: 20px;
+  margin-bottom: 0;
+  vertical-align: middle;
+  font-weight: normal;
+  cursor: pointer;
+}
+.ipModuleForm .radio-inline + .radio-inline,
+.ipModuleForm .checkbox-inline + .checkbox-inline {
+  margin-top: 0;
+  margin-left: 10px;
+}
+.ipModuleForm input[type="radio"][disabled],
+.ipModuleForm input[type="checkbox"][disabled],
+.ipModuleForm input[type="radio"].disabled,
+.ipModuleForm input[type="checkbox"].disabled,
+fieldset[disabled] .ipModuleForm input[type="radio"],
+fieldset[disabled] .ipModuleForm input[type="checkbox"] {
+  cursor: not-allowed;
+}
+.ipModuleForm .radio-inline.disabled,
+.ipModuleForm .checkbox-inline.disabled,
+fieldset[disabled] .ipModuleForm .radio-inline,
+fieldset[disabled] .ipModuleForm .checkbox-inline {
+  cursor: not-allowed;
+}
+.ipModuleForm .radio.disabled label,
+.ipModuleForm .checkbox.disabled label,
+fieldset[disabled] .ipModuleForm .radio label,
+fieldset[disabled] .ipModuleForm .checkbox label {
+  cursor: not-allowed;
+}
+.ipModuleForm .form-control-static {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  margin-bottom: 0;
+}
+.ipModuleForm .form-control-static.input-lg,
+.ipModuleForm .form-control-static.input-sm {
+  padding-left: 0;
+  padding-right: 0;
+}
+.ipModuleForm .input-sm {
+  height: 30px;
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+select.ipModuleForm .input-sm {
+  height: 30px;
+  line-height: 30px;
+}
+textarea.ipModuleForm .input-sm,
+select[multiple].ipModuleForm .input-sm {
+  height: auto;
+}
+.ipModuleForm .form-group-sm .form-control {
+  height: 30px;
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+select.ipModuleForm .form-group-sm .form-control {
+  height: 30px;
+  line-height: 30px;
+}
+textarea.ipModuleForm .form-group-sm .form-control,
+select[multiple].ipModuleForm .form-group-sm .form-control {
+  height: auto;
+}
+.ipModuleForm .form-group-sm .form-control-static {
+  height: 30px;
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.ipModuleForm .input-lg {
+  height: 46px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.3333333;
+  border-radius: 3px;
+}
+select.ipModuleForm .input-lg {
+  height: 46px;
+  line-height: 46px;
+}
+textarea.ipModuleForm .input-lg,
+select[multiple].ipModuleForm .input-lg {
+  height: auto;
+}
+.ipModuleForm .form-group-lg .form-control {
+  height: 46px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.3333333;
+  border-radius: 3px;
+}
+select.ipModuleForm .form-group-lg .form-control {
+  height: 46px;
+  line-height: 46px;
+}
+textarea.ipModuleForm .form-group-lg .form-control,
+select[multiple].ipModuleForm .form-group-lg .form-control {
+  height: auto;
+}
+.ipModuleForm .form-group-lg .form-control-static {
+  height: 46px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.3333333;
+}
+.ipModuleForm .has-feedback {
+  position: relative;
+}
+.ipModuleForm .has-feedback .form-control {
+  padding-right: 43.75px;
+}
+.ipModuleForm .form-control-feedback {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  display: block;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  pointer-events: none;
+}
+.ipModuleForm .input-lg + .form-control-feedback {
+  width: 46px;
+  height: 46px;
+  line-height: 46px;
+}
+.ipModuleForm .input-sm + .form-control-feedback {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+}
+.ipModuleForm .has-success .help-block,
+.ipModuleForm .has-success .control-label,
+.ipModuleForm .has-success .radio,
+.ipModuleForm .has-success .checkbox,
+.ipModuleForm .has-success .radio-inline,
+.ipModuleForm .has-success .checkbox-inline {
+  color: #3c763d;
+}
+.ipModuleForm .has-success .form-control {
+  border-color: #3c763d;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+.ipModuleForm .has-success .form-control:focus {
+  border-color: #2b542c;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;
+}
+.ipModuleForm .has-success .input-group-addon {
+  color: #3c763d;
+  border-color: #3c763d;
+  background-color: #dff0d8;
+}
+.ipModuleForm .has-success .form-control-feedback {
+  color: #3c763d;
+}
+.ipModuleForm .has-warning .help-block,
+.ipModuleForm .has-warning .control-label,
+.ipModuleForm .has-warning .radio,
+.ipModuleForm .has-warning .checkbox,
+.ipModuleForm .has-warning .radio-inline,
+.ipModuleForm .has-warning .checkbox-inline {
+  color: #8a6d3b;
+}
+.ipModuleForm .has-warning .form-control {
+  border-color: #8a6d3b;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+.ipModuleForm .has-warning .form-control:focus {
+  border-color: #66512c;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;
+}
+.ipModuleForm .has-warning .input-group-addon {
+  color: #8a6d3b;
+  border-color: #8a6d3b;
+  background-color: #fcf8e3;
+}
+.ipModuleForm .has-warning .form-control-feedback {
+  color: #8a6d3b;
+}
+.ipModuleForm .has-error .help-block,
+.ipModuleForm .has-error .control-label,
+.ipModuleForm .has-error .radio,
+.ipModuleForm .has-error .checkbox,
+.ipModuleForm .has-error .radio-inline,
+.ipModuleForm .has-error .checkbox-inline {
+  color: #b80000;
+}
+.ipModuleForm .has-error .form-control {
+  border-color: #b80000;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+.ipModuleForm .has-error .form-control:focus {
+  border-color: #850000;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ff1f1f;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ff1f1f;
+}
+.ipModuleForm .has-error .input-group-addon {
+  color: #b80000;
+  border-color: #b80000;
+  background-color: #f2dede;
+}
+.ipModuleForm .has-error .form-control-feedback {
+  color: #b80000;
+}
+.ipModuleForm .has-feedback label ~ .form-control-feedback {
+  top: 26px;
+}
+.ipModuleForm .has-feedback label.sr-only ~ .form-control-feedback {
+  top: 0;
+}
+.ipModuleForm .help-block {
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  color: #737373;
+}
+@media (min-width: 768px) {
+  .ipModuleForm .form-inline .form-group {
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+  .ipModuleForm .form-inline .form-control {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+  }
+  .ipModuleForm .form-inline .form-control-static {
+    display: inline-block;
+  }
+  .ipModuleForm .form-inline .input-group {
+    display: inline-table;
+    vertical-align: middle;
+  }
+  .ipModuleForm .form-inline .input-group .input-group-addon,
+  .ipModuleForm .form-inline .input-group .input-group-btn,
+  .ipModuleForm .form-inline .input-group .form-control {
+    width: auto;
+  }
+  .ipModuleForm .form-inline .input-group > .form-control {
+    width: 100%;
+  }
+  .ipModuleForm .form-inline .control-label {
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+  .ipModuleForm .form-inline .radio,
+  .ipModuleForm .form-inline .checkbox {
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+  .ipModuleForm .form-inline .radio label,
+  .ipModuleForm .form-inline .checkbox label {
+    padding-left: 0;
+  }
+  .ipModuleForm .form-inline .radio input[type="radio"],
+  .ipModuleForm .form-inline .checkbox input[type="checkbox"] {
+    position: relative;
+    margin-left: 0;
+  }
+  .ipModuleForm .form-inline .has-feedback .form-control-feedback {
+    top: 0;
+  }
+}
+.ipModuleForm .form-horizontal .radio,
+.ipModuleForm .form-horizontal .checkbox,
+.ipModuleForm .form-horizontal .radio-inline,
+.ipModuleForm .form-horizontal .checkbox-inline {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 7px;
+}
+.ipModuleForm .form-horizontal .radio,
+.ipModuleForm .form-horizontal .checkbox {
+  min-height: 28px;
+}
+.ipModuleForm .form-horizontal .form-group {
+  margin-left: -20px;
+  margin-right: -20px;
+}
+@media (min-width: 768px) {
+  .ipModuleForm .form-horizontal .control-label {
+    text-align: right;
+    margin-bottom: 0;
+    padding-top: 7px;
+  }
+}
+.ipModuleForm .form-horizontal .has-feedback .form-control-feedback {
+  right: 20px;
+}
+@media (min-width: 768px) {
+  .ipModuleForm .form-horizontal .form-group-lg .control-label {
+    padding-top: 14.333333px;
+  }
+}
+@media (min-width: 768px) {
+  .ipModuleForm .form-horizontal .form-group-sm .control-label {
+    padding-top: 6px;
+  }
+}
+.ipModuleForm .input-group {
+  position: relative;
+  display: table;
+  border-collapse: separate;
+}
+.ipModuleForm .input-group[class*="col-"] {
+  float: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+.ipModuleForm .input-group .form-control {
+  position: relative;
+  z-index: 2;
+  float: left;
+  width: 100%;
+  margin-bottom: 0;
+}
+.ipModuleForm .input-group-lg > .form-control,
+.ipModuleForm .input-group-lg > .input-group-addon,
+.ipModuleForm .input-group-lg > .input-group-btn > .btn {
+  height: 46px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.3333333;
+  border-radius: 3px;
+}
+select.ipModuleForm .input-group-lg > .form-control,
+select.ipModuleForm .input-group-lg > .input-group-addon,
+select.ipModuleForm .input-group-lg > .input-group-btn > .btn {
+  height: 46px;
+  line-height: 46px;
+}
+textarea.ipModuleForm .input-group-lg > .form-control,
+textarea.ipModuleForm .input-group-lg > .input-group-addon,
+textarea.ipModuleForm .input-group-lg > .input-group-btn > .btn,
+select[multiple].ipModuleForm .input-group-lg > .form-control,
+select[multiple].ipModuleForm .input-group-lg > .input-group-addon,
+select[multiple].ipModuleForm .input-group-lg > .input-group-btn > .btn {
+  height: auto;
+}
+.ipModuleForm .input-group-sm > .form-control,
+.ipModuleForm .input-group-sm > .input-group-addon,
+.ipModuleForm .input-group-sm > .input-group-btn > .btn {
+  height: 30px;
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+select.ipModuleForm .input-group-sm > .form-control,
+select.ipModuleForm .input-group-sm > .input-group-addon,
+select.ipModuleForm .input-group-sm > .input-group-btn > .btn {
+  height: 30px;
+  line-height: 30px;
+}
+textarea.ipModuleForm .input-group-sm > .form-control,
+textarea.ipModuleForm .input-group-sm > .input-group-addon,
+textarea.ipModuleForm .input-group-sm > .input-group-btn > .btn,
+select[multiple].ipModuleForm .input-group-sm > .form-control,
+select[multiple].ipModuleForm .input-group-sm > .input-group-addon,
+select[multiple].ipModuleForm .input-group-sm > .input-group-btn > .btn {
+  height: auto;
+}
+.ipModuleForm .input-group-addon,
+.ipModuleForm .input-group-btn,
+.ipModuleForm .input-group .form-control {
+  display: table-cell;
+}
+.ipModuleForm .input-group-addon:not(:first-child):not(:last-child),
+.ipModuleForm .input-group-btn:not(:first-child):not(:last-child),
+.ipModuleForm .input-group .form-control:not(:first-child):not(:last-child) {
+  border-radius: 0;
+}
+.ipModuleForm .input-group-addon,
+.ipModuleForm .input-group-btn {
+  width: 1%;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+.ipModuleForm .input-group-addon {
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1;
+  color: #000000;
+  text-align: center;
+  background-color: #dadada;
+  border: 1px solid #747474;
+  border-radius: 3px;
+}
+.ipModuleForm .input-group-addon.input-sm {
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 3px;
+}
+.ipModuleForm .input-group-addon.input-lg {
+  padding: 10px 16px;
+  font-size: 18px;
+  border-radius: 3px;
+}
+.ipModuleForm .input-group-addon input[type="radio"],
+.ipModuleForm .input-group-addon input[type="checkbox"] {
+  margin-top: 0;
+}
+.ipModuleForm .input-group .form-control:first-child,
+.ipModuleForm .input-group-addon:first-child,
+.ipModuleForm .input-group-btn:first-child > .btn,
+.ipModuleForm .input-group-btn:first-child > .btn-group > .btn,
+.ipModuleForm .input-group-btn:first-child > .dropdown-toggle,
+.ipModuleForm .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle),
+.ipModuleForm .input-group-btn:last-child > .btn-group:not(:last-child) > .btn {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+.ipModuleForm .input-group-addon:first-child {
+  border-right: 0;
+}
+.ipModuleForm .input-group .form-control:last-child,
+.ipModuleForm .input-group-addon:last-child,
+.ipModuleForm .input-group-btn:last-child > .btn,
+.ipModuleForm .input-group-btn:last-child > .btn-group > .btn,
+.ipModuleForm .input-group-btn:last-child > .dropdown-toggle,
+.ipModuleForm .input-group-btn:first-child > .btn:not(:first-child),
+.ipModuleForm .input-group-btn:first-child > .btn-group:not(:first-child) > .btn {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+.ipModuleForm .input-group-addon:last-child {
+  border-left: 0;
+}
+.ipModuleForm .input-group-btn {
+  position: relative;
+  font-size: 0;
+  white-space: nowrap;
+}
+.ipModuleForm .input-group-btn > .btn {
+  position: relative;
+}
+.ipModuleForm .input-group-btn > .btn + .btn {
+  margin-left: -1px;
+}
+.ipModuleForm .input-group-btn > .btn:hover,
+.ipModuleForm .input-group-btn > .btn:focus,
+.ipModuleForm .input-group-btn > .btn:active {
+  z-index: 2;
+}
+.ipModuleForm .input-group-btn:first-child > .btn,
+.ipModuleForm .input-group-btn:first-child > .btn-group {
+  margin-right: -1px;
+}
+.ipModuleForm .input-group-btn:last-child > .btn,
+.ipModuleForm .input-group-btn:last-child > .btn-group {
+  margin-left: -1px;
+}
+@-webkit-keyframes progress-bar-stripes {
+  from {
+    background-position: 40px 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+@keyframes progress-bar-stripes {
+  from {
+    background-position: 40px 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+.ipModuleForm .progress {
+  overflow: hidden;
+  height: 21px;
+  margin-bottom: 21px;
+  background-color: #f5f5f5;
+  border-radius: 3px;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+.ipModuleForm .progress-bar {
+  float: left;
+  width: 0%;
+  height: 100%;
+  font-size: 12px;
+  line-height: 21px;
+  color: #ffffff;
+  text-align: center;
+  background-color: #019bd4;
+  -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+  -webkit-transition: width 0.6s ease;
+  transition: width 0.6s ease;
+}
+.ipModuleForm .progress-striped .progress-bar,
+.ipModuleForm .progress-bar-striped {
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-size: 40px 40px;
+}
+.ipModuleForm .progress.active .progress-bar,
+.ipModuleForm .progress-bar.active {
+  -webkit-animation: progress-bar-stripes 2s linear infinite;
+  animation: progress-bar-stripes 2s linear infinite;
+}
+.ipModuleForm * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.ipModuleForm .form-group {
+  margin-bottom: 20px;
+}
+.ipModuleForm .form-control,
+.ipModuleForm .input-group {
+  max-width: 380px;
+}
+.ipModuleForm textarea.form-control {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  height: 10em;
+}
+.ipModuleForm .progress {
+  margin-bottom: 0;
+}
+.ipModuleForm .help-hint {
+  background-color: #747474;
+  color: #fff;
+  display: none;
+  font-size: 12px;
+  padding: 4px 10px 2px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50%;
+  z-index: 1;
+}
+.ipModuleForm .form-group:hover .help-hint {
+  display: block;
+}
+.ipModuleForm .help-error {
+  background-color: #b80000;
+  color: #fff;
+  display: none;
+  font-size: 12px;
+  max-width: 380px;
+  padding: 4px 10px 2px;
+  width: 100%;
+}
+.ipModuleForm .has-error .help-error {
+  display: block;
+}
+.ipModuleForm .captcha img {
+  display: block;
+  max-width: 100%;
+}
+.ipModuleForm .form-group.type-blank {
+  margin-bottom: 0;
+}
+.ipModuleForm .form-group.type-blank label {
+  display: none;
+}
+.ipModuleForm .form-group.type-blank .help-error {
+  margin-bottom: 20px;
+}
+.ipModuleForm .form-group.type-submit label {
+  display: none;
+}
+.ipModuleForm ._file {
+  background-color: #dadada;
+  border: 1px solid #747474;
+  border-radius: 3px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  margin-top: 5px;
+  max-width: 380px;
+  min-height: 20px;
+  padding: 0.5em;
+  position: relative;
+  word-wrap: break-word;
+}
+.ipModuleForm ._file .close {
+  float: right;
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  opacity: 0.2;
+  filter: alpha(opacity=20);
+}
+.ipModuleForm ._file .close:hover,
+.ipModuleForm ._file .close:focus {
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+.ipModuleForm ._file button.close {
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  -webkit-appearance: none;
+}
+.ipModuleForm ._file ._error {
+  color: #b80000;
+  font-size: 12px;
+}
+.ipModuleForm .btn {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.5;
+  border-radius: 3px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.ipModuleForm .btn-default {
+  background: #019bd4;
+  border: none;
+  border-radius: 3px;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: bold;
+  margin: 0;
+  padding: 0.5em 1em;
+}
+.ipModuleForm .btn-default:hover {
+  box-shadow: 0 0 0 1px #019bd4 inset;
+  background: #01516e;
+  text-decoration: inherit;
+}
+@media (min-width: 768px) {
+  .ipModuleForm.form-inline .form-group {
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+  .ipModuleForm.form-inline .form-control {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+  }
+  .ipModuleForm.form-inline .form-control-static {
+    display: inline-block;
+  }
+  .ipModuleForm.form-inline .input-group {
+    display: inline-table;
+    vertical-align: middle;
+  }
+  .ipModuleForm.form-inline .input-group .input-group-addon,
+  .ipModuleForm.form-inline .input-group .input-group-btn,
+  .ipModuleForm.form-inline .input-group .form-control {
+    width: auto;
+  }
+  .ipModuleForm.form-inline .input-group > .form-control {
+    width: 100%;
+  }
+  .ipModuleForm.form-inline .control-label {
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+  .ipModuleForm.form-inline .radio,
+  .ipModuleForm.form-inline .checkbox {
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+  .ipModuleForm.form-inline .radio label,
+  .ipModuleForm.form-inline .checkbox label {
+    padding-left: 0;
+  }
+  .ipModuleForm.form-inline .radio input[type="radio"],
+  .ipModuleForm.form-inline .checkbox input[type="checkbox"] {
+    position: relative;
+    margin-left: 0;
+  }
+  .ipModuleForm.form-inline .has-feedback .form-control-feedback {
+    top: 0;
+  }
+}
+.ipModuleForm.form-horizontal .radio,
+.ipModuleForm.form-horizontal .checkbox,
+.ipModuleForm.form-horizontal .radio-inline,
+.ipModuleForm.form-horizontal .checkbox-inline {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 7px;
+}
+.ipModuleForm.form-horizontal .radio,
+.ipModuleForm.form-horizontal .checkbox {
+  min-height: 28px;
+}
+.ipModuleForm.form-horizontal .form-group {
+  margin-left: -20px;
+  margin-right: -20px;
+}
+@media (min-width: 768px) {
+  .ipModuleForm.form-horizontal .control-label {
+    text-align: right;
+    margin-bottom: 0;
+    padding-top: 7px;
+  }
+}
+.ipModuleForm.form-horizontal .has-feedback .form-control-feedback {
+  right: 20px;
+}
+@media (min-width: 768px) {
+  .ipModuleForm.form-horizontal .form-group-lg .control-label {
+    padding-top: 14.333333px;
+  }
+}
+@media (min-width: 768px) {
+  .ipModuleForm.form-horizontal .form-group-sm .control-label {
+    padding-top: 6px;
+  }
+}
+.ipBlock {
+  min-height: 10px;
+  /* to create minimum height when block is empty */
+}
+.ipBlock.ipbEmpty {
+  /* styles when block is empty */
+  min-height: 30px;
+  outline: #000 dashed 1px;
+}
+.ipBlock.ipbEmpty:hover {
+  /* styles when block is empty */
+  outline-color: #019bd4;
+}
+.ipBlock .ipbExampleContent {
+  position: relative;
+}
+.ipBlock .ipbExampleContent:after {
+  background-color: #e3e3e3;
+  content: ' ';
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  opacity: 0.3;
+  filter: alpha(opacity=30);
+  top: 0;
+  width: 100%;
+}
+.ipBlock .ipbExampleContent .ipWidget:hover {
+  outline: none;
+}
+.ipBlock .ipbExampleContent .ipbDefault {
+  color: #2f313f;
+  font-size: 24px;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  height: 50px;
+  line-height: 50px;
+  visibility: hidden;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+}
+.ipBlock .ipbExampleContent .ipbUser {
+  position: relative;
+  margin-top: -50px;
+  /* same height as .ipbDefault to show on top of it */
+  min-height: 50px;
+  /* same height as .ipbDefault to show on top of it */
+}
+.ipBlock .ipbExampleContent:hover .ipbDefault {
+  visibility: visible;
+}
+.ipBlock .ipbExampleContent:hover .ipbUser {
+  visibility: hidden;
+}
+.breadcrumb {
+  margin-bottom: 20px;
+  list-style: none;
+  padding: 0;
+}
+.breadcrumb > li {
+  display: inline-block;
+}
+.breadcrumb > li + li:before {
+  content: "/\00a0";
+  padding: 0 0.5em;
+  color: #000000;
+}
+.breadcrumb > .active {
+  color: #000000;
+}
+.ipWidget-Columns ._container {
+  margin: 0 -10px;
+}
+.ipWidget-Columns ._col {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  min-height: 1px;
+  padding: 0 10px;
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  .ipWidget-Columns ._col {
+    float: none;
+    margin-bottom: 20px;
+    width: auto !important;
+  }
+  .ipWidget-Columns ._col:last-child {
+    margin-bottom: 0;
+  }
+}
+.ipWidget-Divider.ipSkin-default {
+  border-bottom: 1px solid #747474;
+  height: 0;
+}
+.ipWidget-Divider.ipSkin-space {
+  height: 25px;
+}
+.ipWidget-File ul {
+  list-style: none;
+  margin-left: 0;
+}
+.ipWidget-File a {
+  color: #019bd4;
+  font-weight: bold;
+}
+.ipWidget-File a:hover {
+  text-decoration: underline;
+}
+.ipWidget-Form .ipwThankYou {
+  /* mimicking the same styles as for form to keep message 'inside' the box */
+  border: 1px solid #888;
+  padding: 20px 25px;
+}
+.ipWidget-Gallery {
+  margin-bottom: 0px;
+}
+.ipWidget-Gallery ._container {
+  list-style: none;
+  margin: 0 -10px;
+}
+.ipWidget-Gallery ._item {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  margin-bottom: 20px;
+  padding: 0 10px;
+  width: 24.99%;
+}
+.ipWidget-Gallery ._image {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+}
+@media screen and (max-width: 480px) {
+  .ipWidget-Gallery ._container {
+    margin: 0 -10px;
+  }
+  .ipWidget-Gallery ._item {
+    margin-bottom: 20px;
+    padding: 0 10px;
+    width: 50%;
+  }
+}
+.ipWidget-Html {
+  max-width: 100%;
+}
+.ipWidget-Image img {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  /* to remove 3px space below the image (default rendering behavior) */
+  max-width: 100%;
+}
+.ipWidget-Missing {
+  /* covered by default styles */
+}
+.ipWidget-Text table,
+.ipWidget-Text pre {
+  max-width: 100%;
+  overflow: auto;
+}
+.ipWidget-Heading {
+  margin-bottom: 10px;
+  margin-top: 30px;
+}
+.ipWidget-Heading:first-child {
+  margin-top: 0;
+}
+.ipWidget-Heading a {
+  color: #000000;
+  text-decoration: inherit;
+}
+.ipWidget-Heading a:hover {
+  text-decoration: underline;
+}

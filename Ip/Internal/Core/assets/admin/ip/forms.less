@@ -1,0 +1,85 @@
+.form-group {
+    position: relative; // to allow .help-hint to be positioned relatively
+
+    &.type-blank {
+        margin-bottom: 0; // removing from flow
+        label {
+            display: none;
+        }
+        .help-error {
+            margin-bottom: 15px; // keeping space when visible
+        }
+    }
+
+    &.type-submit {
+        label {
+            display: none;
+        }
+    }
+}
+.form-control {
+    font-size: 18px; // todox: make variable
+
+    & + .input-group-addon {
+        border-left: 0; // fixing form modal UI (with lots of input group mixing)
+    }
+}
+.help-hint { // to be shown on hover
+    background-color: @input-border;
+    color: #fff; // todox: make variable
+    display: none;
+    font-size: @font-size-small;
+    padding: 4px 10px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    z-index: 2;
+}
+.form-group:hover .help-hint { // hint is shown only on hover
+    display: block;
+}
+.help-error {
+    background-color: @brand-danger;
+    color: #fff; // todox: make variable
+    display: none;
+    font-size: @font-size-small;
+    padding: 4px 10px;
+    width: 100%;
+}
+.has-error .help-error {
+    display: block;
+}
+.captcha { // same as checkbox or radio
+    img {
+        display: block;
+        max-width: 100%;
+    }
+}
+legend[data-toggle="collapse"] { // auto styling if fieldsets are collapsable
+    cursor: pointer;
+
+    &:after {
+        content: '\25B4';
+        display: inline-block;
+        margin-left: (@grid-gutter-width / 4);
+    }
+    &.collapsed {
+        &:after {
+            content: '\25Be';
+        }
+    }
+}
+// selected file style is based on .well styles
+.file ._file {
+    margin-bottom: 0;
+    margin-top: (@grid-gutter-width / 4);
+    padding: (@grid-gutter-width / 4);
+    word-break: break-all;
+
+    .progress {
+        height: (@grid-gutter-width / 8);
+        margin-top: (@grid-gutter-width / 8);
+        margin-bottom: 0;
+    }
+}

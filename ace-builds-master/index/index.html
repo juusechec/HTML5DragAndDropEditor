@@ -46,34 +46,37 @@
                     <div id="collapseOne" class="panel-collapse collapse in">
                         <div class="panel-body">
                         	<div class='span4'>
-				              <div class='switch-container'>
-				                <div class='switch active' data-off='OFF' data-on='ON' data-toggle='switch'></div>
-				              </div>
-				              <ol class='nested_with_switch vertical'>
+				              <ol class='nested_with_no_drop vertical'>
 				                <li class='highlight'>
+				                  <i class='icon-move'></i>
 				                  Item 1
 				                </li>
 				                <li>
+				                	<i class='icon-move'></i>
 				                  Item 2
 				                </li>
 				                <li>
+				                	<i class='icon-move'></i>
 				                  Item 3
 				                </li>
 				                <li>
+				                	<i class='icon-move'></i>
 				                  Item 4
 				                  <ol>
-				                    <li>Item 3.1</li>
-				                    <li>Item 3.2</li>
-				                    <li>Item 3.3</li>
-				                    <li>Item 3.4</li>
-				                    <li>Item 3.5</li>
-				                    <li>Item 3.6</li>
+				                    <li><i class='icon-move'></i>Item 3.1</li>
+				                    <li><i class='icon-move'></i>Item 3.2</li>
+				                    <li><i class='icon-move'></i>Item 3.3</li>
+				                    <li><i class='icon-move'></i>Item 3.4</li>
+				                    <li><i class='icon-move'></i>Item 3.5</li>
+				                    <li><i class='icon-move'></i>Item 3.6</li>
 				                  </ol>
 				                </li>
 				                <li>
+				                	<i class='icon-move'></i>
 				                  Item 5
 				                </li>
 				                <li>
+				                	<i class='icon-move'></i>
 				                  Item 6
 				                </li>
 				              </ol>
@@ -194,38 +197,41 @@
                 <div class="row">
                     <div class="col-lg-6">
                     	<a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Componentes</a>
-                        <h1>Simple Sidebar</h1>
+                        <h3>Elementos en página</h3>
                         <div>
 				            
 				            <div class='span4'>
-				              <div class='switch-container'>
-				                <div class='switch active' data-off='OFF' data-on='ON' data-toggle='switch'></div>
-				              </div>
-				              <ol class='nested_with_switch vertical'>
+				              <ol class='nested_with_drop vertical'>
 				                <li>
+				                	<i class='icon-move'></i>
 				                  Item 1
 				                </li>
 				                <li>
+				                	<i class='icon-move'></i>
 				                  Item 2
 				                </li>
 				                <li>
+				                	<i class='icon-move'></i>
 				                  Item 3
 				                </li>
 				                <li>
+				                	<i class='icon-move'></i>
 				                  Item 4
 				                  <ol>
-				                    <li>Item 3.1</li>
-				                    <li>Item 3.2</li>
-				                    <li>Item 3.3</li>
-				                    <li>Item 3.4</li>
-				                    <li>Item 3.5</li>
-				                    <li>Item 3.6</li>
+				                    <li><i class='icon-move'></i>Item 3.1</li>
+				                    <li><i class='icon-move'></i>Item 3.2</li>
+				                    <li><i class='icon-move'></i>Item 3.3</li>
+				                    <li><i class='icon-move'></i>Item 3.4</li>
+				                    <li><i class='icon-move'></i>Item 3.5</li>
+				                    <li><i class='icon-move'></i>Item 3.6</li>
 				                  </ol>
 				                </li>
 				                <li>
+				                	<i class='icon-move'></i>
 				                  Item 5
 				                </li>
 				                <li>
+				                	<i class='icon-move'></i>
 				                  Item 6
 				                </li>
 				              </ol>
@@ -233,7 +239,7 @@
                         </div>                    
                     </div>
                     <div class="col-lg-6">
-                        <h1>Código</h1>
+                        <h3>Código</h3>
                         <div>
 <pre id="editor" style="height: 300px;">function foo(items) {
     var i;
@@ -275,8 +281,23 @@
     </script>
     <!-- Drag and Drop Script -->
     <script>
-    var oldContainer;
-	$("ol.nested_with_switch").sortable({
+    $("ol.nested_with_drop").sortable({
+	  group: 'nested',
+	  handle: 'i.icon-move',
+	  onDragStart: function (item, container, _super) {
+	    // Duplicate items of the no drop area
+	    if(!container.options.drop){
+	    	item.clone().insertAfter(item);	
+	    }
+	    _super(item);
+	  }
+	});
+	$("ol.nested_with_no_drop").sortable({
+	  group: 'nested',
+	  drop: false
+	});
+	var oldContainer;
+	$("ol.simple_with_no_drop_a").sortable({
 	  group: 'nested',
 	  afterMove: function (placeholder, container) {
 	    if(oldContainer != container){

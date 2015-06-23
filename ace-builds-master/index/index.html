@@ -50,30 +50,34 @@
 				                <li class='highlight'>
 				                	<i class='icon-move'></i>
 				                  	formulario
-				                  	<i class='icon-config'></i>
+				                  	<i class='icon-config' value='formulario'></i>
 				                  	<ol>				                  		
 				                  	</ol>
 				                </li>
 				                <li>
 				                	<i class='icon-move' value='campoBoton'></i>
 				                  	campoBoton
-				                  	<i class='icon-config'></i>
+				                  	<i class='icon-config' value='campoBoton'></i>
 				                </li>
 				                <li>
 				                	<i class='icon-move' value='campoCuadroTexto'></i>
 				                 	campoCuadroTexto
+				                 	<i class='icon-config' value='campoCuadroTexto'></i>
 				                </li>
 				                <li>
 				                	<i class='icon-move'></i>
 				                 	division
+				                 	<i class='icon-config' value='division'></i>
 				                </li>
 				                <li>
 				                	<i class='icon-move'></i>
 				                 	campoMensaje
+				                 	<i class='icon-config' value='campoMensaje'></i>
 				                </li>
 				                <li>
 				                	<i class='icon-move'></i>
 				                 	division
+				                 	<i class='icon-config' value='division'></i>
 				                </li>
 				              </ol>
 				            </div>
@@ -88,32 +92,6 @@
                         </h4>
                     </div>
                     <div id="collapseTwo" class="panel-collapse collapse">
-                        <div class="panel-body">
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree"><span class="glyphicon glyphicon-user">
-                            </span>Account</a>
-                        </h4>
-                    </div>
-                    <div id="collapseThree" class="panel-collapse collapse">
-                        <div class="panel-body">
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour"><span class="glyphicon glyphicon-file">
-                            </span>Reports</a>
-                        </h4>
-                    </div>
-                    <div id="collapseFour" class="panel-collapse collapse">
                         <div class="panel-body">
                             
                         </div>
@@ -138,14 +116,10 @@
                         </div>                    
                     </div>
                     <div class="col-lg-6">
+                    	<a href="#update-code" class="btn btn-danger" id="update-code">Actualizar código</a>
                         <h3>Código</h3>
                         <div>
-<pre id="editor" style="height: 300px;">function foo(items) {
-    var i;
-    for (i = 0; i &lt; items.length; i++) {
-        alert("Ace Rocks " + items[i]);
-    }
-}</pre>					
+							<pre id="editor" style="height: 300px;"></pre>					
 						</div>
                     </div>
                 </div>
@@ -175,15 +149,8 @@
 	
 	<!-- ACE editor -->
 	<script src="js/ace/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
-	
-	<!-- ACE init -->
-	<script>
-	    var editor = ace.edit("editor");
-	    editor.setTheme("ace/theme/eclipse");
-	    editor.getSession().setMode("ace/mode/javascript");
-	</script>
-	
-    <!-- Drag and Drop Script init -->
+		
+    <!-- Initialice scripts -->
     <script src="js/sara.js"></script>
 
 </body>

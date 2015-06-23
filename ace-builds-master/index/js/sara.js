@@ -7,6 +7,7 @@ $("ol.nested_with_drop").sortable({
 	onDragStart : function(item, container, _super) {
 		console.log(container,_super);
 		// Duplicate items of the no drop area
+		console.log(container);
 		if (!container.options.drop) {
 			item.clone().insertAfter(item);
 			//alert();
@@ -21,3 +22,9 @@ $("ol.nested_with_no_drop").sortable({
 });
 
 $(".icon-config").click(function(){alert();});
+
+
+$.getJSON("elements/campoBoton.json", function(result){
+    alert(result);
+    console.log(result);
+});

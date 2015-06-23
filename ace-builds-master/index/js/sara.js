@@ -1,6 +1,22 @@
 /**
  * @author Jorge Ulises Useche Cuellar
  */
+
+var editor = ace.edit("editor");
+editor.setTheme("ace/theme/eclipse");
+editor.getSession().setMode("ace/mode/php");
+
+$.ajax({
+  url: "code/form.php.txt",
+  beforeSend: function( xhr ) {
+    xhr.overrideMimeType( "text/plain; charset=x-user-defined" );
+  }
+})
+.done(function( data ) {
+  console.log(data);
+  editor.insert(data);
+});
+
 $("ol.nested_with_drop").sortable({
 	group : 'nested',
 	handle : 'i.icon-move',
@@ -21,3 +37,7 @@ $("ol.nested_with_no_drop").sortable({
 });
 
 $(".icon-config").click(function(){alert();});
+
+$(".nested_with_no_drop .icon-config").each(function( index ) {
+  console.log($(this).attr('value'));
+});

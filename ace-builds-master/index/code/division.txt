@@ -1,0 +1,4 @@
+		// ------------------Division para los botones-------------------------
+        $atributos ["id"] = "botones";
+        $atributos ["estilo"] = "marcoBotones";
+        echo $this->miFormulario->division ( "inicio", $atributos );

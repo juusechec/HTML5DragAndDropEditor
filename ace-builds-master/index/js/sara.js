@@ -13,7 +13,6 @@ $.ajax({
   }
 })
 .done(function( data ) {
-  console.log(data);
   editor.insert(data);
 });
 
@@ -39,11 +38,12 @@ $("ol.nested_with_no_drop").sortable({
 
 $(".icon-config").click(function(){alert();});
 
-$.getJSON("elements/campoBoton.json", function(result){
-    alert(result);
-    console.log(result);
-});
-
 $(".nested_with_no_drop .icon-config").each(function( index ) {
   console.log($(this).attr('value'));
 });
+
+
+$.getJSON("elements/campoBoton.json", function(result){
+    console.log(result);
+});
+

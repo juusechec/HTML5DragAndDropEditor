@@ -25,9 +25,9 @@ $("ol.nested_with_drop").sortable({
 		// Duplicate items of the no drop area
 		// console.log(item);
 		if (!container.options.drop) {
-			var itemclone = item.clone();
-			itemclone.find('.icon-config')[0].valores = item.find('.icon-config')[0].valores;
-			addClickEvent(itemclone.find('.icon-config')[0]);
+			var itemclone = item.clone(true);
+			//itemclone.find('.icon-config')[0].valores = item.find('.icon-config')[0].valores;
+			// addClickEvent(itemclone.find('.icon-config')[0]);
 			itemclone.insertAfter(item);
 			//alert();
 		}
@@ -47,13 +47,14 @@ $("ol.nested_with_no_drop").sortable({
 
 function crearAtributos (elem,value){
 	$.getJSON("elements/"+value+".json", function(result){
-	    $(elem)[0].valores=result;
+	    elem.valores=result.default;
 	    addClickEvent(elem);
 	});	
 }
 
 function addClickEvent(elem){
 	$(elem).click(function(){
+		perro = elem
     	openDialog(elem);
     });
 }
@@ -63,9 +64,7 @@ function addClickEvent(elem){
  * @param {Object} elem
  */
 
-var elementoActual = null;
 function createConfigNode(elem){
-	elementoActual = elem;
 	var arreglo = elem.valores;
 	
 	var table1 = $("<table>").addClass("table-striped table1").css("width","100%");
@@ -93,10 +92,10 @@ function createConfigNode(elem){
 	var attr = "$esteCampo";
 	var tr = $("<tr>").append(crearTdKeyValue(attr,arreglo[attr]));
 	tbody.append(tr);
-	var attr = "header";
+	var attr = "header1";
 	var tr = $("<tr>").append(crearTdTextAreaKeyValue(attr,arreglo[attr]));
 	tbody.append(tr);
-	var attr = "footer";
+	var attr = "footer1";
 	var tr = $("<tr>").append(crearTdTextAreaKeyValue(attr,arreglo[attr]));
 	tbody.append(tr);
 	table2.append(thead);
@@ -148,13 +147,15 @@ function saveDataInNode(){
 		} else if(v.tagName=="TEXTAREA"){
 			valor = $(v).html().split('\n');
 		}
-		console.log(key,valor);
+		// console.log(key,valor);
 		elementoActual.valores[key] = valor;
 	});
 	$('#myModal').modal('hide');
 }
 
 function openDialog(elem){
+	console.log(elem)
+	elementoActual = elem;
 	var tabla = createConfigNode(elem);
 	$("#myModal .modal-body").empty();
 	$("#myModal .modal-body").append(tabla);

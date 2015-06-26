@@ -15,7 +15,9 @@
 			"tipoSubmit":"'jquery'",
 			"valor":"$this->lenguaje->getCadena ( $esteCampo );",
 			"nombreFormulario":"$esteBloque ['nombre'];"
-		},		
+		},
+		"contentIds":[
+		],
 		"footer1":[
 			"// Aplica atributos globales al control",
 	        "$atributos = array_merge ( $atributos, $atributosGlobales );",
@@ -23,8 +25,13 @@
 	        "unset ( $atributos );",
 	        "// -----------------FIN CONTROL: Botón -----------------------------------------------------------"
 	    ],
-	    "contentIds":false,
-	    "footer2":false
+	    "footer2":[
+			"// Aplica atributos globales al control",
+	        "$atributos = array_merge ( $atributos, $atributosGlobales );",
+	        "echo $this->miFormulario->campoBoton ( $atributos );",
+	        "unset ( $atributos );",
+	        "// -----------------FIN CONTROL: Botón -----------------------------------------------------------"
+	    ]
 	},
 	"options": {
 		"$atributos": {

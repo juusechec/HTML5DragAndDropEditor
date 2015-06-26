@@ -62,8 +62,11 @@ function addClickEvent(elem){
  * a partir de un tipo de elemento con valores, retorna el nodo con la estructura definida
  * @param {Object} elem
  */
+
+var elementoActual = null;
 function createConfigNode(elem){
-	var arreglo = $(elem)[0].valores;
+	elementoActual = elem;
+	var arreglo = elem.valores;
 	
 	var table1 = $("<table>").addClass("table-striped table1").css("width","100%");
 	var thead = $("<thead>").html("<tr>"+
@@ -126,9 +129,29 @@ function crearTdTextAreaKeyValue(key,arreglo){
 }
 
 function saveDataInNode(){
-	$("#myModal .modal-body table").each(function(){
-		console.log($(this).attr('key'),$(this).attr('value'));
+	$(".table1 tr>td:nth-child(2)").children().each(function(i,v){
+		var key = $(v).attr("key");
+		var valor = new String();
+		if(v.tagName=="INPUT"){
+			valor = v.value;
+		} else if(v.tagName=="TEXTAREA"){
+			valor = $(v).html().split('\n');
+		}
+		console.log(key,valor);
+		elementoActual.valores.$atributos[key] = valor;
 	});
+	$(".table2 tr>td:nth-child(2)").children().each(function(i,v){
+		var key = $(v).attr("key");
+		var valor = new String();
+		if(v.tagName=="INPUT"){
+			valor = v.value;
+		} else if(v.tagName=="TEXTAREA"){
+			valor = $(v).html().split('\n');
+		}
+		console.log(key,valor);
+		elementoActual.valores[key] = valor;
+	});
+	$('#myModal').modal('hide');
 }
 
 function openDialog(elem){
@@ -141,3 +164,29 @@ function openDialog(elem){
 $(".nested_with_no_drop .icon-config").each(function( index ) {
   crearAtributos(this,$(this).attr('value'));
 });
+
+
+function updateCode(){
+	var contenido = $('#contenidoFormulario').children();
+	$.each(contenido,function(i,v){
+		var valores = $(v).find('.icon-config')[0].valores;
+		var texto = convertirJSON2PHP(valores);
+		editor.gotoLine(53);
+		editor.insert(texto);
+	});
+}
+
+function convertirJSON2PHP(valores){
+	var texto = new String();
+	$.each(valores.header,function(i,v){
+		texto += v + "\n";
+	});
+	texto += "$esteCampo = " + valores.$esteCampo + "\n";;
+	$.each(valores.$atributos,function(i,v){
+		texto += "$atributos ['" + i + "'] = " + v + "\n";
+	});
+	$.each(valores.footer,function(i,v){
+		texto += v + "\n";
+	});
+	return texto;
+}

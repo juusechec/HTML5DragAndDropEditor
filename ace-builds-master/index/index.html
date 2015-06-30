@@ -9,7 +9,12 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Constructor de interfaz de SARA</title>
+    <title>SARA Form Creator</title>
+    <meta name="description" content="Un pequeño programa para armar la interfaz de formulario en el framework SARA">
+	<meta name="author" content="Jorge Ulises Useche Cuellar &copy; Copyright by Jorge Ulises Useche Cuellar">
+	
+	<!-- Replace favicon.ico in the root of your domain and delete these references -->
+	<link rel="shortcut icon" href="favicon.ico">
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -53,69 +58,13 @@
 	
     <!-- #Wrapper -->
     <div id="wrapper">
-    			
-        <!-- Sidebar -->
-        <div id="sidebar-wrapper">
-            <div class="panel-group" id="accordion">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                        	<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-th">
-                            </span>Componentes HTML</a>
-                        </h4>
-                    </div>
-                    <div id="collapseOne" class="panel-collapse collapse in">
-                        <div class="panel-body">
-                        	<div class='span4'>
-				              <ol class='nested_with_no_drop vertical'>
-				                <li class='highlight'>
-				                	<i class='icon-move'></i>
-				                  	formulario
-				                  	<i class='icon-config' value='formulario'></i>
-				                  	<ol>				                  		
-				                  	</ol>
-				                </li>				                
-				                <li class='highlight'>
-				                	<i class='icon-move'></i>
-				                 	division
-				                 	<i class='icon-config' value='division'></i>
-				                 	<ol>				                  		
-				                  	</ol>
-				                </li>
-				                <li>
-				                	<i class='icon-move'></i>
-				                  	campoBoton
-				                  	<i class='icon-config' value='campoBoton'></i>
-				                </li>
-				                <li>
-				                	<i class='icon-move'></i>
-				                 	campoCuadroTexto
-				                 	<i class='icon-config' value='campoCuadroTexto'></i>
-				                </li>
-				                <li>
-				                	<i class='icon-move'></i>
-				                 	campoMensaje
-				                 	<i class='icon-config' value='campoMensaje'></i>
-				                </li>
-				              </ol>
-				            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">                            
-                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"><span class="glyphicon glyphicon-folder-close">
-                            </span>Content</a>
-                        </h4>
-                    </div>
-                    <div id="collapseTwo" class="panel-collapse collapse">
-                        <div class="panel-body">
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
+    	
+    	<!-- Sidebar -->
+        <div id="sidebar-wrapper">            
+        	<a href="#update-code" class="btn btn-danger" id="update-code" onclick="updateCode();">Actualizar código</a>
+            <div>
+				<pre id="editor" style="height: 300px;"></pre>					
+			</div>
         </div>
         <!-- /#sidebar-wrapper -->
 
@@ -124,27 +73,82 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-6">
-                    	<a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Componentes</a>
+                    	<div class="panel-group" id="accordion">
+			                <div class="panel panel-default">
+			                    <div class="panel-heading">
+			                        <h4 class="panel-title">
+			                        	<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-th">
+			                            </span>Componentes HTML</a>
+			                        </h4>
+			                    </div>
+			                    <div id="collapseOne" class="panel-collapse collapse in">
+			                        <div class="panel-body">
+			                        	<div class='row-fluid'>
+							              <ol class='nested_with_no_drop vertical'>
+							                <li class='highlight'>
+							                	<i class='icon-move'></i>
+							                  	formulario
+							                  	<i class='icon-config' value='formulario'></i>
+							                  	<ol>				                  		
+							                  	</ol>
+							                </li>				                
+							                <li class='highlight'>
+							                	<i class='icon-move'></i>
+							                 	division
+							                 	<i class='icon-config' value='division'></i>
+							                 	<ol>				                  		
+							                  	</ol>
+							                </li>
+							                <li>
+							                	<i class='icon-move'></i>
+							                  	campoBoton
+							                  	<i class='icon-config' value='campoBoton'></i>
+							                </li>
+							                <li>
+							                	<i class='icon-move'></i>
+							                 	campoCuadroTexto
+							                 	<i class='icon-config' value='campoCuadroTexto'></i>
+							                </li>
+							                <li>
+							                	<i class='icon-move'></i>
+							                 	campoMensaje
+							                 	<i class='icon-config' value='campoMensaje'></i>
+							                </li>
+							              </ol>
+							            </div>
+			                        </div>
+			                    </div>
+			                </div>
+			                <div class="panel panel-default">
+			                    <div class="panel-heading">
+			                        <h4 class="panel-title">                            
+			                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"><span class="glyphicon glyphicon-folder-close">
+			                            </span>Content</a>
+			                        </h4>
+			                    </div>
+			                    <div id="collapseTwo" class="panel-collapse collapse">
+			                        <div class="panel-body">
+			                            
+			                        </div>
+			                    </div>
+			                </div>
+			            </div>                    	                    
+                    </div>
+                    <div class="col-lg-6">
+                    	<a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Mostrar código</a>
                         <h3>Elementos en página</h3>
                         <div>				            
 				            <div class='row-fluid box-rounded'>
 				              <ol class='nested_with_drop vertical' id='contenidoFormulario'>
 				              </ol>
 				            </div>
-                        </div>                    
-                    </div>
-                    <div class="col-lg-6">
-                    	<a href="#update-code" class="btn btn-danger" id="update-code" onclick="updateCode();">Actualizar código</a>
-                        <h3>Código</h3>
-                        <div>
-							<pre id="editor" style="height: 300px;"></pre>					
-						</div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- /#page-content-wrapper -->
-
+        <!-- /#page-content-wrapper -->		
+        
     </div>
     <!-- /#wrapper -->
 

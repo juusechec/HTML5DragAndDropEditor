@@ -57,7 +57,6 @@ function crearAtributos (elem,value){
 
 function addClickEvent(elem){
 	$(elem).click(function(){
-		perro = elem
     	openDialog(elem);
     });
 }
@@ -144,7 +143,6 @@ function saveDataInNode(){
 		} else if(v.tagName=="TEXTAREA"){
 			valor = $(v).html().split('\n');
 		}
-		console.log(key,valor);
 		elementoActual.valores.$atributos[key] = valor;
 	});
 	$(".table2 tr>td:nth-child(2)").children().each(function(i,v){
@@ -162,7 +160,6 @@ function saveDataInNode(){
 }
 
 function openDialog(elem){
-	console.log(elem)
 	elementoActual = elem;
 	var tabla = createConfigNode(elem);
 	$("#myModal .modal-body").empty();
@@ -177,25 +174,44 @@ $(".nested_with_no_drop .icon-config").each(function( index ) {
 
 function updateCode(){
 	var contenido = $('#contenidoFormulario').children();
-	$.each(contenido,function(i,v){
-		var valores = $(v).find('.icon-config')[0].valores;
-		var texto = convertirJSON2PHP(valores);
-		editor.gotoLine(53);
-		editor.insert(texto);
-	});
+	var texto = searchChildComponents(contenido);
+	editor.gotoLine(53);
+	editor.insert(texto);
 }
 
-function convertirJSON2PHP(valores){
+function searchChildComponents(contenido){
 	var texto = new String();
-	$.each(valores.header,function(i,v){
+	$.each(contenido,function(i,v){
+		texto = convertirJSON2PHP(v);
+	});
+	return texto;
+}
+
+function convertirJSON2PHP(contenidonodo){
+	var nodo = $(contenidonodo).find('.icon-config')[0];
+	var valores = nodo.valores;
+	var texto = new String();
+	$.each(valores.header1,function(i,v){
 		texto += v + "\n";
 	});
 	texto += "$esteCampo = " + valores.$esteCampo + "\n";;
 	$.each(valores.$atributos,function(i,v){
 		texto += "$atributos ['" + i + "'] = " + v + "\n";
 	});
-	$.each(valores.footer,function(i,v){
+	$.each(valores.footer1,function(i,v){
 		texto += v + "\n";
 	});
+	if(valores.content==true){
+		var contenido = $(contenidonodo).children("ol").children();
+		console.log(contenido);
+		$.each(contenido,function(i,v){
+			texto += convertirJSON2PHP(v);
+		});		
+	}
+	if(valores.footer2){
+		$.each(valores.footer2,function(i,v){
+			texto += v + "\n";
+		});
+	}
 	return texto;
 }

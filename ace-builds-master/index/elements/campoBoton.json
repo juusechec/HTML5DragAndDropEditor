@@ -23,7 +23,7 @@
 	        "unset ( $atributos );",
 	        "// -----------------FIN CONTROL: Botón -----------------------------------------------------------"
 	    ],
-	    "contentIds":false,
+	    "content":false,
 	    "footer2":false
 	},
 	"options": {

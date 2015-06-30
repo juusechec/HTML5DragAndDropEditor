@@ -22,7 +22,7 @@
 	        "echo $this->miFormulario->formulario ( $atributos );",
 	        "// ---------------- SECCION: Controles del Formulario -----------------------------------------------"
 	    ],
-	    "contentIds":[],
+	    "content":true,
 	    "footer2":[
 			"// ---------------- FIN SECCION: Controles del Formulario -------------------------------------------",
 	        "// ----------------FINALIZAR EL FORMULARIO ----------------------------------------------------------",

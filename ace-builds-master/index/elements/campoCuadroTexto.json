@@ -1,29 +1,38 @@
 {
-	"$esteCampo": "'nombreCampo'",
-	"$atributos": {
-		"id":"$esteCampo",
-		"nombre":"$esteCampo",
-		"tabIndex":"$tab",
-		"tipo":"'text'",
-		"submit":"true",
-		"estiloMarco":"''",
-		"estiloBoton":"'jqueryui'",
-		"verificar":"''",
-		"tipoSubmit":"'jquery'",
-		"valor":"$this->lenguaje->getCadena ( $esteCampo );",
-		"nombreFormulario":"$esteBloque ['nombre'];"
+	"default": {
+		"header1":[
+			"// ---------------- CONTROL: Cuadro de Texto --------------------------------------------------------"
+		],
+		"$esteCampo": "'nombreCampo'",
+		"$atributos": {
+			"id":"$esteCampo",
+			"nombre":"$esteCampo",
+			"tabIndex":"$tab",
+			"tipo":"'text'",
+			"submit":"true",
+			"estiloMarco":"''",
+			"estiloBoton":"'jqueryui'",
+			"verificar":"''",
+			"tipoSubmit":"'jquery'",
+			"valor":"$this->lenguaje->getCadena ( $esteCampo );",
+			"nombreFormulario":"$esteBloque ['nombre'];"
+		},		
+		"footer1":[
+			"$tab ++;",
+			"// Aplica atributos globales al control",
+	        "$atributos = array_merge ( $atributos, $atributosGlobales );",
+	        "echo $this->miFormulario->campoCuadroTexto ( $atributos );",
+	        "unset ( $atributos );",
+	        "// --------------- FIN CONTROL : Cuadro de Texto --------------------------------------------------"
+	    ],
+	    "content":false,
+	    "footer2":false
 	},
-	"header":[
-		"// ---------------- CONTROL: Cuadro de Texto --------------------------------------------------------"
-	],
-	"footer":[
-		"$tab ++;",
-		"// Aplica atributos globales al control",
-        "$atributos = array_merge ( $atributos, $atributosGlobales );",
-        "echo $this->miFormulario->campoCuadroTexto ( $atributos );",
-        "unset ( $atributos );",
-        "// --------------- FIN CONTROL : Cuadro de Texto --------------------------------------------------"
-    ]
+	"options": {
+		"$atributos": {
+			"estiloBoton":["'jqueryui'","'bootstrap'"],
+			"verificar":["''","true","false"]
+		}
+	}
 }
-
         

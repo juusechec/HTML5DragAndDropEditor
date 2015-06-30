@@ -1,0 +1,35 @@
+{
+	"default": {
+		"header1":[
+			"// -----------------CONTROL: Botón ----------------------------------------------------------------"
+		],
+		"$esteCampo": "'botonAceptar'",
+		"$atributos": {
+			"id":"$esteCampo",
+			"tabIndex":"$tab",
+			"tipo":"'boton'",
+			"submit":"true",
+			"estiloMarco":"''",
+			"estiloBoton":"'jqueryui'",
+			"verificar":"''",
+			"tipoSubmit":"'jquery'",
+			"valor":"$this->lenguaje->getCadena ( $esteCampo );",
+			"nombreFormulario":"$esteBloque ['nombre'];"
+		},		
+		"footer1":[
+			"// Aplica atributos globales al control",
+	        "$atributos = array_merge ( $atributos, $atributosGlobales );",
+	        "echo $this->miFormulario->campoBoton ( $atributos );",
+	        "unset ( $atributos );",
+	        "// -----------------FIN CONTROL: Botón -----------------------------------------------------------"
+	    ],
+	    "contentIds":false,
+	    "footer2":false
+	},
+	"options": {
+		"$atributos": {
+			"estiloBoton":["'jqueryui'","'bootstrap'"],
+			"verificar":["''","true","false"]
+		}
+	}
+}

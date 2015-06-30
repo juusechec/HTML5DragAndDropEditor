@@ -1,0 +1,39 @@
+{
+	"default": {
+		"header1":[
+			"// ---------------- SECCION: Parámetros Generales del Formulario ----------------------------------"
+		],
+		"$esteCampo": "$esteBloque ['nombre']",
+		"$atributos": {
+			"id":"$esteCampo",
+			"nombre":"$esteCampo",
+			"tipoFormulario":"''",
+			"metodo":"'POST'",
+			"action":"'index.php'",
+			"titulo":"$this->lenguaje->getCadena ( $esteCampo );",
+			"estilo":"''",
+			"marco":"true"
+		},		
+		"footer1":[
+			"$tab = 1;",
+	        "// ---------------- FIN SECCION: de Parámetros Generales del Formulario ----------------------------",
+	        "// ----------------INICIAR EL FORMULARIO ------------------------------------------------------------",
+	        "$atributos ['tipoEtiqueta'] = 'inicio';",
+	        "echo $this->miFormulario->formulario ( $atributos );"
+	    ],
+	    "contentIds":false,
+	    "footer2":[
+			"$tab = 1;",
+	        "$atributos = array_merge ( $atributos, $atributosGlobales );",
+	        "echo $this->miFormulario->campoBoton ( $atributos );",
+	        "unset ( $atributos );",
+	        "// -----------------FIN CONTROL: Botón -----------------------------------------------------------"
+	    ]
+	},
+	"options": {
+		"$atributos": {
+			"estiloBoton":["'jqueryui'","'bootstrap'"],
+			"verificar":["''","true","false"]
+		}
+	}
+}

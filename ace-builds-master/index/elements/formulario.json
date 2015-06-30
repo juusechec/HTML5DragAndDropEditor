@@ -19,15 +19,17 @@
 	        "// ---------------- FIN SECCION: de Parámetros Generales del Formulario ----------------------------",
 	        "// ----------------INICIAR EL FORMULARIO ------------------------------------------------------------",
 	        "$atributos ['tipoEtiqueta'] = 'inicio';",
-	        "echo $this->miFormulario->formulario ( $atributos );"
+	        "echo $this->miFormulario->formulario ( $atributos );",
+	        "// ---------------- SECCION: Controles del Formulario -----------------------------------------------"
 	    ],
-	    "contentIds":false,
+	    "contentIds":[],
 	    "footer2":[
-			"$tab = 1;",
-	        "$atributos = array_merge ( $atributos, $atributosGlobales );",
-	        "echo $this->miFormulario->campoBoton ( $atributos );",
-	        "unset ( $atributos );",
-	        "// -----------------FIN CONTROL: Botón -----------------------------------------------------------"
+			"// ---------------- FIN SECCION: Controles del Formulario -------------------------------------------",
+	        "// ----------------FINALIZAR EL FORMULARIO ----------------------------------------------------------",
+	        "// Se debe declarar el mismo atributo de marco con que se inició el formulario.",
+	        "$atributos ['marco'] = true;",
+	        "$atributos ['tipoEtiqueta'] = 'fin';",
+	        "echo $this->miFormulario->formulario ( $atributos );"
 	    ]
 	},
 	"options": {

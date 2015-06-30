@@ -25,10 +25,13 @@ $("ol.nested_with_drop").sortable({
 		// Duplicate items of the no drop area
 		// console.log(item);
 		if (!container.options.drop) {
-			var itemclone = item.clone(true);
+			var itemclone = item.clone(false,false);
 			//itemclone.find('.icon-config')[0].valores = item.find('.icon-config')[0].valores;
-			// addClickEvent(itemclone.find('.icon-config')[0]);
 			itemclone.insertAfter(item);
+			var iconconfigclone = itemclone.find('.icon-config')[0];
+			addClickEvent(iconconfigclone);
+			var valores = JSON.parse(JSON.stringify(item.find('.icon-config')[0].valores));
+			iconconfigclone.valores = valores;
 			//alert();
 		}
 		_super(item);
@@ -98,6 +101,11 @@ function createConfigNode(elem){
 	var attr = "footer1";
 	var tr = $("<tr>").append(crearTdTextAreaKeyValue(attr,arreglo[attr]));
 	tbody.append(tr);
+	var attr = "footer2";
+	if(arreglo[attr]){
+		var tr = $("<tr>").append(crearTdTextAreaKeyValue(attr,arreglo[attr]));
+		tbody.append(tr);	
+	}
 	table2.append(thead);
 	table2.append(tbody);
 	

@@ -5090,12 +5090,10 @@ ol li.highlight {
 	color: #999999;
 }
 /* line 39, /Users/jonasvonandrian/jquery-sortable/source/css/application.css.sass */
-ol li.highlight i.icon-move, ol li.highlight i.icon-config, ol li.highlight i.icon-remove {
+ol li.highlight > i.icon-move,
+ol li.highlight > i.icon-config,
+ol li.highlight > i.icon-remove {
 	background-image: url("../img/glyphicons-halflings-white.png");
-}
-
-ol li.highlight ol li i.icon-move, ol li.highlight ol li  i.icon-config, ol li.highlight ol li  i.icon-remove {
-	background-image: url("../img/glyphicons-halflings.png");
 }
 
 /* line 42, /Users/jonasvonandrian/jquery-sortable/source/css/application.css.sass */

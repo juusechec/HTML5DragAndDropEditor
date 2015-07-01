@@ -2,6 +2,13 @@
  * @author Jorge Ulises Useche Cuellar
  */
 
+// Menu Toggle Function
+$(".menu-toggle").click(function(e) {
+	e.preventDefault();
+    $("#wrapper").toggleClass("toggled");
+    // $("#editor").css("height",$(window).innerHeight()-40+"px");
+});
+
 var editor = ace.edit("editor");
 editor.setTheme("ace/theme/eclipse");
 editor.getSession().setMode("ace/mode/php");

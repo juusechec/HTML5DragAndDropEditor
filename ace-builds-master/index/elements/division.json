@@ -9,19 +9,17 @@
 			"estilo":"'marcoBotones'"
 		},
 		"content":true,
-		"footer1":[
-			"// Aplica atributos globales al control",
-	        "$atributos = array_merge ( $atributos, $atributosGlobales );",
-	        "echo $this->miFormulario->campoBoton ( $atributos );",
-	        "unset ( $atributos );",
-	        "// -----------------FIN CONTROL: Botón -----------------------------------------------------------"
+		"footer1":[			
+	        "echo $this->miFormulario->division ( 'inicio', $atributos );",
+	        "// ----------------  Fin Inicio Division para los botones ----------------------------",
+	        "// ---------------- SECCION: Controles dentro de la division -------------------------"
 	    ],
 	    "footer2":[
-			"// Aplica atributos globales al control",
-	        "$atributos = array_merge ( $atributos, $atributosGlobales );",
-	        "echo $this->miFormulario->campoBoton ( $atributos );",
-	        "unset ( $atributos );",
-	        "// -----------------FIN CONTROL: Botón -----------------------------------------------------------"
+			"// ---------------- FIN SECCION: Controles dentro de la division ----------------------",
+			"",
+			"// ------------------Inicio Fin Division para los botones-------------------------",
+			"echo $this->miFormulario->division ( 'fin' );",
+			"// ------------------Fin Fin Division para los botones-------------------------"
 	    ]
 	},
 	"options": {

@@ -5,6 +5,7 @@
 var editor = ace.edit("editor");
 editor.setTheme("ace/theme/eclipse");
 editor.getSession().setMode("ace/mode/php");
+$("#editor").css("height",$(window).innerHeight()-40+"px");
 
 $.ajax({
   url: "code/form.php.txt",
@@ -32,6 +33,8 @@ $("ol.nested_with_drop").sortable({
 			addClickEvent(iconconfigclone);
 			var valores = JSON.parse(JSON.stringify(item.find('.icon-config')[0].valores));
 			iconconfigclone.valores = valores;
+			item.find('.icon-remove').attr('removable','true');
+			addClickEvent2(item.find('.icon-remove')[0]);
 			//alert();
 		}
 		_super(item);
@@ -42,11 +45,6 @@ $("ol.nested_with_no_drop").sortable({
 	group : 'nested',
 	drop : false
 });
-
-// $(".icon-config").click(function(){
-	// //alert();
-// 	
-// });
 
 function crearAtributos (elem,value){
 	$.getJSON("elements/"+value+".json", function(result){
@@ -59,6 +57,14 @@ function addClickEvent(elem){
 	$(elem).click(function(){
     	openDialog(elem);
     });
+}
+
+function addClickEvent2(elem){
+	$(elem).click(function(){
+		if($(this).attr('removable')=='true'){
+			$(this).parent('li').remove();
+		}
+	});
 }
 
 /**

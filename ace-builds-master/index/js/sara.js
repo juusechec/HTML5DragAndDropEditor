@@ -13,6 +13,7 @@ var editor = ace.edit("editor");
 editor.setTheme("ace/theme/eclipse");
 editor.getSession().setMode("ace/mode/php");
 $("#editor").css("height",$(window).innerHeight()-40+"px");
+// $("#sidebar-wrapper").css("width",$(window).innerWidth()*0.4+"px");
 
 $.ajax({
   url: "code/form.php.txt",
@@ -190,6 +191,34 @@ function updateCode(){
 	var texto = searchChildComponents(contenido);
 	editor.gotoLine(53);
 	editor.insert(texto);
+}
+
+function saveCode(){
+	var textToWrite = editor.getValue();
+	var textFileAsBlob = new Blob([textToWrite], {type:'text/plain'});
+	var fileNameToSaveAs = "Form.php";//document.getElementById("inputFileNameToSaveAs").value;
+
+	var downloadLink = document.createElement("a");
+	downloadLink.download = fileNameToSaveAs;
+	downloadLink.innerHTML = "Download File";
+	if (window.webkitURL != null){
+		// Chrome allows the link to be clicked
+		// without actually adding it to the DOM.
+		downloadLink.href = window.webkitURL.createObjectURL(textFileAsBlob);
+	} else {
+		// Firefox requires the link to be added to the DOM
+		// before it can be clicked.
+		downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
+		downloadLink.onclick = destroyClickedElement;
+		downloadLink.style.display = "none";
+		document.body.appendChild(downloadLink);
+	}
+	
+	downloadLink.click();
+}
+
+function destroyClickedElement(event){
+	document.body.removeChild(event.target);
 }
 
 function searchChildComponents(contenido){

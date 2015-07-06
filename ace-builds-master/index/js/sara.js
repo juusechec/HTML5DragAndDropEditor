@@ -56,7 +56,7 @@ $("ol.nested_with_no_drop").sortable({
 
 function crearAtributos (elem,value){
 	$.getJSON("elements/"+value+".json", function(result){
-	    elem.valores=result.default;
+	    elem.valores=result;
 	    addClickEvent(elem);
 	});	
 }
@@ -81,7 +81,8 @@ function addClickEvent2(elem){
  */
 
 function createConfigNode(elem){
-	var arreglo = elem.valores;
+	var arreglo = elem.valores.default;
+	var opciones = elem.valores.options;
 	
 	var table1 = $("<table>").addClass("table-striped table1").css("width","100%");
 	var thead = $("<thead>").html("<tr>"+
@@ -90,7 +91,7 @@ function createConfigNode(elem){
 	    "</tr>");
 	var tbody = $("<tbody>");
 	$.each(arreglo.$atributos,function(key,value){
-		var td = crearTdKeyValue(key,value);
+		var td = crearTdKeyValueOptions(key,opciones.$atributos[key][value],opciones.$atributos[key]);
 		var tr = $("<tr>");
 		tr.append(td[0]);
 		tr.append(td[1]);
@@ -126,6 +127,49 @@ function createConfigNode(elem){
 	return div;
 }
 
+/**
+ * Permite generar un arreglo de elementos <td> en el que se pueda 
+ * @param key String con la llave del atributo
+ * @param value String con el valor predeterminado del atributo
+ * @param options Array con los valores que puede tener el atributo
+ * @returns Array con nodos <td>
+ */
+function crearTdKeyValueOptions(key,value,options){
+	var td1 = $("<td>").html(key);
+	var input = $("<input>").addClass("form-control").attr("key",key).attr("value",value);
+	var div = $("<div>").addClass("glyphicon glyphicon-triangle-bottom select-editable-narrow");
+	div[0].options = options;
+	div.click(clickInInputOptions);
+	var td2 = $("<td>").append(input).append(div);
+	return [td1,td2];
+}
+
+function clickInInputOptions(a){
+	var elem = a.target;
+	$(".select-options").remove();
+	var select = $("<select>").attr("multiple","").addClass("form-control")
+	$.each(elem.options,function (k,v){
+		var option = $("<option>").html(v);
+		select.append(option);
+	});
+	var parent = $(elem).parent();
+	select.addClass("select-options");
+	select.css("width", parent[0].offsetWidth + 'px');
+	select.css("top",parent[0].offsetTop + 49 + 'px');
+	select.css("position","absolute");
+	select.css("z-index","1000");
+	select.mouseleave(function (a){
+		var sel = a.target;
+		$(sel).remove();
+	});
+	select.change(function (a){
+		var sel = a.target;
+		parent.children(".form-control").val(sel.value);
+		$(sel).remove();
+	});
+	parent.append(select);
+}
+
 function crearTdKeyValue(key,value){
 	var td1 = $("<td>").html(key);
 	var input = $("<input>").addClass("form-control").attr("key",key).attr("value",value);
@@ -157,7 +201,7 @@ function saveDataInNode(){
 		} else if(v.tagName=="TEXTAREA"){
 			valor = $(v).html().split('\n');
 		}
-		elementoActual.valores.$atributos[key] = valor;
+		elementoActual.valores.default.$atributos[key] = valor;
 	});
 	$(".table2 tr>td:nth-child(2)").children().each(function(i,v){
 		var key = $(v).attr("key");
@@ -168,7 +212,7 @@ function saveDataInNode(){
 			valor = $(v).html().split('\n');
 		}
 		// console.log(key,valor);
-		elementoActual.valores[key] = valor;
+		elementoActual.valores.default[key] = valor;
 	});
 	$('#myModal').modal('hide');
 }
@@ -236,9 +280,9 @@ function convertirJSON2PHP(contenidonodo){
 	$.each(valores.header1,function(i,v){
 		texto += v + "\n";
 	});
-	texto += "$esteCampo = " + valores.$esteCampo + "\n";;
+	texto += "$esteCampo = " + valores.$esteCampo + ";\n";
 	$.each(valores.$atributos,function(i,v){
-		texto += "$atributos ['" + i + "'] = " + v + "\n";
+		texto += "$atributos ['" + i + "'] = " + v + ";\n";
 	});
 	$.each(valores.footer1,function(i,v){
 		texto += v + "\n";

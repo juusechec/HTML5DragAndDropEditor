@@ -150,3 +150,15 @@ ol.example li.placeholder:before {
 }
 
 /*end Draggable styles*/
+
+/*Editable Select*/
+.select-editable-narrow{
+	display: initial;
+	margin-left: 100%;
+    position: relative;
+    top: -25px;
+    right: 35px;
+    padding: 1em;
+    cursor: pointer;
+}
+/*end Editable Select*/

@@ -1,7 +1,7 @@
 {
 	"default": {
 		"header1":[
-			"// -----------------CONTROL: Botón ----------------------------------------------------------------"
+			"// -----------------CONTROL: Botón ------------------------------------------"
 		],
 		"$esteCampo": "'botonAceptar'",
 		"$atributos": {
@@ -18,7 +18,7 @@
 	        "$atributos = array_merge ( $atributos, $atributosGlobales );",
 	        "echo $this->miFormulario->campoBoton ( $atributos );",
 	        "unset ( $atributos );",
-	        "// -----------------FIN CONTROL: Botón -----------------------------------------------------------"
+	        "// -----------------FIN CONTROL: Botón ---------------------------------------"
 	    ],
 	    "content":false,
 	    "footer2":false

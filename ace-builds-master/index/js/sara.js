@@ -56,9 +56,24 @@ $("ol.nested_with_no_drop").sortable({
 
 function crearAtributos (elem,value){
 	$.getJSON("elements/"+value+".json", function(result){
+//		console.log(value+".json")
+		result = replaceAttributesDefaultData(result);
 	    elem.valores=result;
+//	    console.log(result);
 	    addClickEvent(elem);
 	});	
+}
+
+function replaceAttributesDefaultData(result){
+	var atributos = result.default.$atributos;
+	$.each(atributos,function (i,v){
+//		console.log(i,v);
+		if(result.options.$atributos[i] && result.options.$atributos[i][v]){
+//			console.log(result.default.$atributos[i], result.options.$atributos[i][v])
+			result.default.$atributos[i] = result.options.$atributos[i][v];
+		}
+	});
+	return result;
 }
 
 function addClickEvent(elem){
@@ -91,7 +106,11 @@ function createConfigNode(elem){
 	    "</tr>");
 	var tbody = $("<tbody>");
 	$.each(arreglo.$atributos,function(key,value){
-		var td = crearTdKeyValueOptions(key,opciones.$atributos[key][value],opciones.$atributos[key]);
+		if(opciones.$atributos[key]){
+			var td = crearTdKeyValueOptions(key,value,opciones.$atributos[key]);
+		} else {
+			var td = crearTdKeyValue(key,value);
+		}		
 		var tr = $("<tr>");
 		tr.append(td[0]);
 		tr.append(td[1]);
@@ -140,34 +159,37 @@ function crearTdKeyValueOptions(key,value,options){
 	var div = $("<div>").addClass("glyphicon glyphicon-triangle-bottom select-editable-narrow");
 	div[0].options = options;
 	div.click(clickInInputOptions);
-	var td2 = $("<td>").append(input).append(div);
+	var td2 = $("<td>").css("position","relative").append(input).append(div);
 	return [td1,td2];
 }
 
 function clickInInputOptions(a){
 	var elem = a.target;
-	$(".select-options").remove();
-	var select = $("<select>").attr("multiple","").addClass("form-control")
-	$.each(elem.options,function (k,v){
-		var option = $("<option>").html(v);
-		select.append(option);
-	});
-	var parent = $(elem).parent();
-	select.addClass("select-options");
-	select.css("width", parent[0].offsetWidth + 'px');
-	select.css("top",parent[0].offsetTop + 49 + 'px');
-	select.css("position","absolute");
-	select.css("z-index","1000");
-	select.mouseleave(function (a){
-		var sel = a.target;
-		$(sel).remove();
-	});
-	select.change(function (a){
-		var sel = a.target;
-		parent.children(".form-control").val(sel.value);
-		$(sel).remove();
-	});
-	parent.append(select);
+	if ($(elem).parent().children("select")[0]){
+		$(".select-options").remove();
+	} else {
+		var select = $("<select>").attr("multiple","").addClass("form-control")
+		$.each(elem.options,function (k,v){
+			var option = $("<option>").html(v);
+			select.append(option);
+		});
+		var parent = $(elem).parent();
+		select.addClass("select-options");
+		select.css("width", parent[0].offsetWidth + 'px');
+//		select.css("top",parent[0].offsetTop + 'px');
+		select.css("position","absolute");
+		select.css("z-index","1000");
+		select.mouseleave(function (a){
+			var sel = a.target;
+			$(sel).remove();
+		});
+		select.change(function (a){
+			var sel = a.target;
+			parent.children(".form-control").val(sel.value);
+			$(sel).remove();
+		});
+		parent.append(select);
+	}
 }
 
 function crearTdKeyValue(key,value){
@@ -193,7 +215,7 @@ function crearTdTextAreaKeyValue(key,arreglo){
 }
 
 function saveDataInNode(){
-	$(".table1 tr>td:nth-child(2)").children().each(function(i,v){
+	$(".table1 tr>td:nth-child(2)").children("input,textarea").each(function(i,v){
 		var key = $(v).attr("key");
 		var valor = new String();
 		if(v.tagName=="INPUT"){
@@ -203,7 +225,7 @@ function saveDataInNode(){
 		}
 		elementoActual.valores.default.$atributos[key] = valor;
 	});
-	$(".table2 tr>td:nth-child(2)").children().each(function(i,v){
+	$(".table2 tr>td:nth-child(2)").children("input,textarea").each(function(i,v){
 		var key = $(v).attr("key");
 		var valor = new String();
 		if(v.tagName=="INPUT"){
@@ -275,7 +297,7 @@ function searchChildComponents(contenido){
 
 function convertirJSON2PHP(contenidonodo){
 	var nodo = $(contenidonodo).find('.icon-config')[0];
-	var valores = nodo.valores;
+	var valores = nodo.valores.default;
 	var texto = new String();
 	$.each(valores.header1,function(i,v){
 		texto += v + "\n";

@@ -1,21 +1,21 @@
 {
 	"default": {
 		"header1":[
-			"// ---------------- CONTROL: Cuadro de Texto --------------------------------------------------------"
+			"// ---------------- CONTROL: Cuadro de Texto -------------------------------"
 		],
 		"$esteCampo": "'nombreCampo'",
 		"$atributos": {
-			"id":"$esteCampo",
+			"id":0,
 			"nombre":"$esteCampo",
-			"tabIndex":"$tab",
-			"tipo":"'text'",
+			"tabIndex":0,
+			"tipo":0,
 			"submit":"true",
-			"estiloMarco":"''",
-			"estiloBoton":"'jqueryui'",
+			"estiloMarco":0,
+			"estiloBoton":0,
 			"verificar":"''",
-			"tipoSubmit":"'jquery'",
-			"valor":"$this->lenguaje->getCadena ( $esteCampo );",
-			"nombreFormulario":"$esteBloque ['nombre'];"
+			"tipoSubmit":0,
+			"valor":0,
+			"nombreFormulario":0
 		},		
 		"footer1":[
 			"$tab ++;",
@@ -23,15 +23,49 @@
 	        "$atributos = array_merge ( $atributos, $atributosGlobales );",
 	        "echo $this->miFormulario->campoCuadroTexto ( $atributos );",
 	        "unset ( $atributos );",
-	        "// --------------- FIN CONTROL : Cuadro de Texto --------------------------------------------------"
+	        "// --------------- FIN CONTROL : Cuadro de Texto ----------------------------"
 	    ],
 	    "content":false,
 	    "footer2":false
 	},
 	"options": {
 		"$atributos": {
-			"estiloBoton":["'jqueryui'","'bootstrap'"],
-			"verificar":["''","true","false"]
+			"anchoCaja":[],
+			"anchoEtiqueta":[],
+			"columnas":[],
+			"enlace":[],
+			"enlaceCodificar":[],
+			"estilo":[],
+			"estiloArea":[],
+			"estiloBoton":["'jqueryui'"],
+			"estiloContenido":[],
+			"estiloEnLinea":[],
+			"estiloEtiqueta":[],
+			"estiloMarco":["''"],
+			"etiqueta":[],
+			"hidden":[],
+			"id":["$esteCampo"],
+			"inicio":[],
+			"jqueryui":[],
+			"leyenda":[],
+			"marco":[],
+			"maximoTamanno":[],
+			"mensaje":[],
+			"metodo":[],
+			"nombreFormulario":["$esteBloque ['nombre']"],
+			"onClick":[],
+			"seleccionado":[],
+			"sinDivision":[],
+			"tabIndex":["$tab"],
+			"tamanno":[],
+			"texto":[],
+			"textoEnriquecido":[],
+			"tipo":["'text'"],
+			"tipoFormulario":[],
+			"tipoSubmit":["'jquery'"],
+			"titulo":[],
+			"valor":["$this->lenguaje->getCadena ( $esteCampo )"],
+			"verificarFormulario":[]
 		}
 	}
 }

@@ -2017,6 +2017,10 @@ table .span24 {
 	background-position: -457px 0;
 }
 
+.icon-remove[removable='false']{
+	display: none;
+}
+
 /* line 105, /Users/jonasvonandrian/.rvm/gems/ruby-1.9.3-p484/bundler/gems/sass-twitter-bootstrap-06795315e047/lib/bootstrap/_sprites.scss */
 .icon-step-backward {
 	background-position: -192px -72px;

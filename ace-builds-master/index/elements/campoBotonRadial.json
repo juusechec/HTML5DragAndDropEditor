@@ -1,6 +1,7 @@
 {
 	"default": {
 		"header1":[
+			"// -----------------INICIO CONTROL: Botón Radial ------------------------------------"
 		],
 		"$esteCampo": "'botonAceptar'",
 		"$atributos": {
@@ -10,6 +11,7 @@
 			"":0
 		},		
 		"footer1":[
+			"// -----------------FIN CONTROL: Botón Radial ------------------------------------"
 	    ],
 	    "content":false,
 	    "footer2":false

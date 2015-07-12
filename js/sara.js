@@ -59,7 +59,7 @@ function crearAtributos (elem,value){
 //		console.log(value+".json")
 		result = replaceAttributesDefaultData(result);
 	    elem.valores=result;
-//	    console.log(result);
+	    console.log(result);
 	    addClickEvent(elem);
 	});	
 }

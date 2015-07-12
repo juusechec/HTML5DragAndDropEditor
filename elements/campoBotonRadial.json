@@ -1,6 +1,7 @@
 {
 	"default": {
 		"header1":[
+			"// -----------------INICIO CONTROL: Botón Radial ------------------------------------"
 		],
 		"$esteCampo": "'botonAceptar'",
 		"$atributos": {
@@ -10,7 +11,11 @@
 			"":0
 		},		
 		"footer1":[
+<<<<<<< HEAD:elements/campoBotonRadial.json
 			"unset ( $atributos );",
+=======
+			"// -----------------FIN CONTROL: Botón Radial ------------------------------------"
+>>>>>>> a4f3a7312b2c3eb5848ce72ebde4b2354e5d7203:ace-builds-master/index/elements/campoBotonRadial.json
 	    ],
 	    "content":false,
 	    "footer2":false

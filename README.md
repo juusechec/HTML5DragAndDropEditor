@@ -6,10 +6,10 @@ Use bootstrap and ace editor.
 
 ## Screenshots
 
-![screenshot](./docs/images/Screenshot from 2017-06-20 21-31-34.png)
+![screenshot](./docs/images/Screenshot%20from%202017-06-20%2021-31-34.png)
 
-![screenshot](./docs/images/Screenshot from 2017-06-20 21-31-50.png)
+![screenshot](./docs/images/Screenshot%20from%202017-06-20%2021-31-50.png)
 
-![screenshot](./docs/images/Screenshot from 2017-06-20 21-31-56.png)
+![screenshot](./docs/images/Screenshot%20from%202017-06-20%2021-31-56.png)
 
-![screenshot](./docs/images/Screenshot from 2017-06-20 21-32-34.png)
+![screenshot](./docs/images/Screenshot%20from%202017-06-20%2021-32-34.png)
